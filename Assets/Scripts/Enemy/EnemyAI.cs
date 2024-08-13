@@ -6,35 +6,35 @@ using UnityEngine.AI;
 public abstract class EnemyAI : MonoBehaviour
 {
     protected enum State { Idle, Patrol, Chase, Attack, Dead }
-    protected State currentState;
+    protected State BasecurrentState;
 
-    protected Transform player;
-    protected float chaseRange, attackRange, patrolSpeed, chaseSpeed;
+    protected Transform Baseplayer;
+    protected float BasechaseRange, BaseattackRange, BasepatrolSpeed, BasechaseSpeed;
 
 
-    protected NavMeshAgent navAgent;
+    protected NavMeshAgent BasenavAgent;
 
-    protected Transform[] patrolPoints;  // Array of patrol points
-    protected int currentPatrolIndex;
-    protected float idleTime = 3f;  // Time spent in idle state
-    protected float idleTimer = 0f;
+    protected Transform[] BasepatrolPoints;  // Array of patrol points
+    protected int BasecurrentPatrolIndex;
+    protected float BaseidleTime = 3f;  // Time spent in idle state
+    protected float BaseidleTimer = 0f;
 
-    protected EnemyStats stats;
+    protected EnemyStats Basestats;
     //protected Animator animator;
 
     protected virtual void Start()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-       // animator = GetComponent<Animator>();
-        currentState = State.Idle;
-        navAgent.updateRotation = false;
-        navAgent.updateUpAxis= false;
-        currentPatrolIndex = 0;
+        BasenavAgent = GetComponent<NavMeshAgent>();
+        // animator = GetComponent<Animator>();
+        BasecurrentState = State.Idle;
+        BasenavAgent.updateRotation = false;
+        BasenavAgent.updateUpAxis= false;
+        BasecurrentPatrolIndex = 0;
 
-        chaseRange = stats.chaseRange;
-        chaseSpeed = stats.chaseSpeed;
-        patrolSpeed = stats.patrolSpeed;
-        attackRange = stats.attackRange;
+        BasechaseRange = Basestats.chaseRange;
+        BasechaseSpeed = Basestats.chaseSpeed;
+        BasepatrolSpeed = Basestats.patrolSpeed;
+        BaseattackRange = Basestats.attackRange;
     }
 
     protected virtual void Update()
@@ -42,7 +42,7 @@ public abstract class EnemyAI : MonoBehaviour
         //navAgent.SetDestination(player.position);
 
         //FSM
-        switch (currentState)
+        switch (BasecurrentState)
         {
             case State.Idle:
                 Idle();
@@ -62,18 +62,18 @@ public abstract class EnemyAI : MonoBehaviour
     protected virtual void Idle()
     {
         //animator.SetBool("IsMoving", false);
-        idleTimer += Time.deltaTime;
+        BaseidleTimer += Time.deltaTime;
 
-        if (idleTimer >= idleTime)
+        if (BaseidleTimer >= BaseidleTime)
         {
-            currentState = State.Patrol;
-            idleTimer = 0f;
+            BasecurrentState = State.Patrol;
+            BaseidleTimer = 0f;
         }
 
         // Check if player is within chase range
-        if (Vector3.Distance(transform.position, player.position) < chaseRange)
+        if (Vector3.Distance(transform.position, Baseplayer.position) < BasechaseRange)
         {
-            currentState = State.Chase;
+            BasecurrentState = State.Chase;
         }
     }
 
@@ -81,43 +81,43 @@ public abstract class EnemyAI : MonoBehaviour
     {
         // animator.SetBool("IsMoving", true);
 
-        navAgent.speed = patrolSpeed;
+        BasenavAgent.speed = BasepatrolSpeed;
 
         // Move towards the current patrol point
-        navAgent.SetDestination(patrolPoints[currentPatrolIndex].position);
+        BasenavAgent.SetDestination(BasepatrolPoints[BasecurrentPatrolIndex].position);
 
         // If the enemy reaches the patrol point, switch to the next one
-        if (Vector3.Distance(transform.position, patrolPoints[currentPatrolIndex].position) < 2f)
+        if (Vector3.Distance(transform.position, BasepatrolPoints[BasecurrentPatrolIndex].position) < 2f)
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-            currentState = State.Idle;  // Switch back to Idle after reaching a patrol point
+            BasecurrentPatrolIndex = (BasecurrentPatrolIndex + 1) % BasepatrolPoints.Length;
+            BasecurrentState = State.Idle;  // Switch back to Idle after reaching a patrol point
         }
 
 
         // Transition to Chase if player is close
-        if (Vector3.Distance(transform.position, player.position) < chaseRange)
+        if (Vector3.Distance(transform.position, Baseplayer.position) < BasechaseRange)
         {
-            currentState = State.Chase;
+            BasecurrentState = State.Chase;
         }
     }
 
     protected virtual void Chase()
     {
-       // animator.SetBool("IsMoving", true);
-        navAgent.speed = chaseSpeed;
+        // animator.SetBool("IsMoving", true);
+        BasenavAgent.speed = BasechaseSpeed;
 
         // Move towards the player
-        navAgent.SetDestination(player.position);
+        BasenavAgent.SetDestination(Baseplayer.position);
 
         // Transition to Attack if within attack range
-        if (Vector3.Distance(transform.position, player.position) < attackRange)
+        if (Vector3.Distance(transform.position, Baseplayer.position) < BaseattackRange)
         {
-            currentState = State.Attack;
+            BasecurrentState = State.Attack;
         }
         // Transition back to Idle if player is too far
-        else if (Vector3.Distance(transform.position, player.position) > chaseRange)
+        else if (Vector3.Distance(transform.position, Baseplayer.position) > BasechaseRange)
         {
-            currentState = State.Idle;
+            BasecurrentState = State.Idle;
         }
     }
 
@@ -126,12 +126,12 @@ public abstract class EnemyAI : MonoBehaviour
        // animator.SetBool("IsMoving", false);
 
         // Face the player
-        transform.LookAt(player);
+        transform.LookAt(Baseplayer);
 
         // Transition back to Chase if player moves out of attack range
-        if (Vector3.Distance(transform.position, player.position) > attackRange)
+        if (Vector3.Distance(transform.position, Baseplayer.position) > BaseattackRange)
         {
-            currentState = State.Chase;
+            BasecurrentState = State.Chase;
         }
     }
 
@@ -139,9 +139,9 @@ public abstract class EnemyAI : MonoBehaviour
     protected virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.DrawWireSphere(transform.position, BasechaseRange);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(transform.position, BaseattackRange);
     }
 }
