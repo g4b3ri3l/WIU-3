@@ -7,11 +7,21 @@ public abstract class Enemy : MonoBehaviour
     protected string enemyName;
     protected float currentHealth, attackDamage;
 
+    [SerializeField] protected EnemyHealthBar healthBar;
+
+    protected virtual void Awake()
+    {
+        healthBar = GetComponentInChildren<EnemyHealthBar>();
+    }
+
     protected virtual void Start()
     {
         enemyName = stats.enemyName;
         currentHealth = stats.maxHealth;
         attackDamage = stats.damage;
+
+        healthBar.UpdateHealthBar(currentHealth, stats.maxHealth);
+
     }
 
     protected virtual void Update()
@@ -20,8 +30,9 @@ public abstract class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(float amount)
-    {
+    {   
         currentHealth -= amount;
+        healthBar.UpdateHealthBar(currentHealth, stats.maxHealth);
         if (currentHealth <= 0f)
         {
             Die();
