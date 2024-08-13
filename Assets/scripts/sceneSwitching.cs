@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.SceneManagement;
+
+public class sceneSwitching : MonoBehaviour
+{
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Task 2c - Load the scene using SceneManager.LoadScene()
+            SceneManager.LoadScene("level0");
+        }
+    }
+}
