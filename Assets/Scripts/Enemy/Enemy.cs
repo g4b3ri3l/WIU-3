@@ -2,12 +2,12 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private EnemyStats stats;  // Reference to ScriptableObject with common enemy data
+    private EnemyStats stats;  // Reference to ScriptableObject with common enemy data
 
     protected string enemyName;
     protected float currentHealth, attackDamage;
 
-    [SerializeField] protected EnemyHealthBar healthBar;
+    protected EnemyHealthBar healthBar;
 
     protected virtual void Awake()
     {
@@ -29,7 +29,7 @@ public abstract class Enemy : MonoBehaviour
         
     }
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount)
     {   
         currentHealth -= amount;
         healthBar.UpdateHealthBar(currentHealth, stats.maxHealth);
@@ -37,14 +37,14 @@ public abstract class Enemy : MonoBehaviour
         {
             Die();
         }
+
     }
 
-    protected virtual void Die()
+    public virtual void Die()
     {
         Debug.Log($"{stats.enemyName} has died!");
         Destroy(gameObject);  // Default death behavior
     }
 
-    // Abstract methods to be implemented by child classes
-    protected abstract void Attack();
+
 }

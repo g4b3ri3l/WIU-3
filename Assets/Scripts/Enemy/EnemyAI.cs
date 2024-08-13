@@ -5,21 +5,21 @@ using UnityEngine.AI;
 
 public abstract class EnemyAI : MonoBehaviour
 {
-    protected enum State { Idle, Patrol, Chase, Attack }
-    [SerializeField] protected State currentState;
+    protected enum State { Idle, Patrol, Chase, Attack, Dead }
+    protected State currentState;
 
-    [SerializeField] protected Transform player;
-    [SerializeField] protected float chaseRange, attackRange, patrolSpeed, chaseSpeed;
+    protected Transform player;
+    protected float chaseRange, attackRange, patrolSpeed, chaseSpeed;
 
 
     protected NavMeshAgent navAgent;
 
-    [SerializeField] protected Transform[] patrolPoints;  // Array of patrol points
-    [SerializeField] protected int currentPatrolIndex;
-    [SerializeField] protected float idleTime = 3f;  // Time spent in idle state
-    [SerializeField] protected float idleTimer = 0f;
+    protected Transform[] patrolPoints;  // Array of patrol points
+    protected int currentPatrolIndex;
+    protected float idleTime = 3f;  // Time spent in idle state
+    protected float idleTimer = 0f;
 
-    [SerializeField] protected EnemyStats stats;
+    protected EnemyStats stats;
     //protected Animator animator;
 
     protected virtual void Start()
