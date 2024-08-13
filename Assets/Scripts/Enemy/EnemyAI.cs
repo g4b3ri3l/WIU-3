@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public abstract class EnemyAI : MonoBehaviour
 {
-    public enum State { Idle, Patrol, Chase, Attack }
-    [SerializeField] private State currentState;
+    protected enum State { Idle, Patrol, Chase, Attack }
+    [SerializeField] protected State currentState;
 
-    [SerializeField] private Transform player;
-    [SerializeField] private float chaseRange, attackRange, patrolSpeed, chaseSpeed; 
+    [SerializeField] protected Transform player;
+    [SerializeField] protected float chaseRange, attackRange, patrolSpeed, chaseSpeed;
 
 
-    private NavMeshAgent navAgent;
+    protected NavMeshAgent navAgent;
 
-    [SerializeField] private Transform[] patrolPoints;  // Array of patrol points
-    [SerializeField] private int currentPatrolIndex;
-    [SerializeField] private float idleTime = 3f;  // Time spent in idle state
-    [SerializeField] private float idleTimer = 0f;
+    [SerializeField] protected Transform[] patrolPoints;  // Array of patrol points
+    [SerializeField] protected int currentPatrolIndex;
+    [SerializeField] protected float idleTime = 3f;  // Time spent in idle state
+    [SerializeField] protected float idleTimer = 0f;
 
-    [SerializeField] private EnemyStats stats;
-    //private Animator animator;
+    [SerializeField] protected EnemyStats stats;
+    //protected Animator animator;
 
-    void Start()
+    protected virtual void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
        // animator = GetComponent<Animator>();
@@ -37,10 +37,11 @@ public class EnemyAI : MonoBehaviour
         attackRange = stats.attackRange;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         //navAgent.SetDestination(player.position);
 
+        //FSM
         switch (currentState)
         {
             case State.Idle:
@@ -58,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Idle()
+    protected virtual void Idle()
     {
         //animator.SetBool("IsMoving", false);
         idleTimer += Time.deltaTime;
@@ -76,9 +77,8 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Patrol()
+    protected virtual void Patrol()
     {
-        // Patrol logic (moving between waypoints, etc.)
         // animator.SetBool("IsMoving", true);
 
         navAgent.speed = patrolSpeed;
@@ -101,7 +101,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Chase()
+    protected virtual void Chase()
     {
        // animator.SetBool("IsMoving", true);
         navAgent.speed = chaseSpeed;
@@ -121,14 +121,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Attack()
+    protected virtual void Attack()
     {
        // animator.SetBool("IsMoving", false);
 
         // Face the player
         transform.LookAt(player);
-
-        // Attack logic here (e.g., reduce player health)
 
         // Transition back to Chase if player moves out of attack range
         if (Vector3.Distance(transform.position, player.position) > attackRange)
@@ -138,13 +136,11 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Draw attack and chase range circles in the Scene view
-    void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
-        // Set Gizmo color for chase range (e.g., blue)
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
 
-        // Set Gizmo color for attack range (e.g., red)
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
