@@ -15,12 +15,6 @@ public class MeleeController : MonoBehaviour
 
     Health enemyHP;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,27 +36,6 @@ public class MeleeController : MonoBehaviour
         //{
         //    animator.SetBool("Melee", false);
         //}
-        
-
-        ////Melee Attack
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (EnemyInSight())
-        //    {
-        //        cooldowntimer += Time.deltaTime;
-        //        if (cooldowntimer >= attackCooldown)
-        //        {
-        //            cooldowntimer = 0;
-        //            enemyHP.TakeDamage(10);
-        //            //SoundManager.instance.PlaySound(punch);
-        //            //animator.SetBool("Melee", true);
-        //        }
-        //    }
-        //}
-        ////else if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-        ////{
-        ////    animator.SetBool("Melee", false);
-        ////}
     }
 
     bool EnemyInSight()
@@ -73,9 +46,6 @@ public class MeleeController : MonoBehaviour
             Debug.Log(hit.collider != null);
             enemyHP = hit.transform.GetComponent<Health>();
         }
-
-        
-
         return hit.collider != null;
     }
 

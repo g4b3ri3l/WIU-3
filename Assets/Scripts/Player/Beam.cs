@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Beam : MonoBehaviour
 {
     float delay = 0.5f;
     Health enemyhp;
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         {
             enemyhp = collision.transform.GetComponent<Health>();
 
-            enemyhp.TakeDamage(10);
+            enemyhp.TakeDamage(20);
 
             //Destroy(collision.gameObject);
             Destroy(gameObject);

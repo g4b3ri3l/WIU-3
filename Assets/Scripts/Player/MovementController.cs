@@ -16,7 +16,11 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashPower = 3f;
     [SerializeField] float dashTime = 0.2f;
     [SerializeField] float dashCooldown = 1f;
+    [SerializeField] float dashStam = 20f;
 
+    [SerializeField] float stamina = 100f;
+    [SerializeField] float stamDrain = 0.5f;
+    [SerializeField] float stamRecov = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +53,21 @@ public class MovementController : MonoBehaviour
         {
             return;
         }
+
+        if (vert > 0)
+        {
+            stamina -= stamDrain;
+        }
+        else
+        {
+            stamina += stamRecov;
+
+            if (stamina >= 100f)
+            {
+                stamina = 100f;
+            }
+        }
+
         _rigid.velocity = new Vector2(hori * speed, vert * speed);
     }
 
@@ -67,9 +86,10 @@ public class MovementController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        stamina -= dashStam;
         float oggrav = _rigid.gravityScale;
         _rigid.gravityScale = 0.0f;
-        _rigid.velocity = new Vector2(_rigid.velocity.x * dashPower, 0f);
+        _rigid.velocity = new Vector2(_rigid.velocity.x * dashPower, _rigid.velocity.y * dashPower);
         yield return new WaitForSeconds(dashTime);
         _rigid.gravityScale = oggrav;
         isDashing = false;
