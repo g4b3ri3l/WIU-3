@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class SwordFish : Enemy
@@ -35,7 +36,21 @@ public class SwordFish : Enemy
         transform.eulerAngles = new Vector3(fixedRotation, fixedRotation, eulerAngles.z);
     }
 
+    public override void TakeDamage(float amount)
+    {
+        // Implementation for SwordFish
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
 
+    public override void Die()
+    {
+        Debug.Log($"{swordFishStats.enemyName} has died!");
+        Destroy(gameObject);  // Default death behavior
+    }
 }
 
    
