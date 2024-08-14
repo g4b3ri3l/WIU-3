@@ -1004,6 +1004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1
   circleCollider: {fileID: 1570064292}
+  interactionPoint: {fileID: 0}
   player: {fileID: 2028548805}
 --- !u!58 &1570064292
 CircleCollider2D:
@@ -1721,7 +1722,7 @@ MonoBehaviour:
   speed: 10
   attackCooldown: 1
   cooldowntimer: 0
-  inputBuffer: 0.015
+  inputBuffer: 1
   bufferTimer: 0
   offset: 0
 --- !u!1660057539 &9223372036854775807

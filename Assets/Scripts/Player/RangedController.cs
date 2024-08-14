@@ -34,10 +34,9 @@ public class RangedController : MonoBehaviour
         {
             attacking = true;
         }
-
+        bufferTimer += Time.deltaTime;
         if (attacking && Input.GetMouseButtonUp(1))
         {
-            bufferTimer += Time.deltaTime;
             if (bufferTimer >= inputBuffer)
             {
                 bufferTimer = 0;
