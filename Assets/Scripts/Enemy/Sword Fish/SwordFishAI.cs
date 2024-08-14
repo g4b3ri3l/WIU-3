@@ -82,7 +82,7 @@ public class SwordFishAI : EnemyAI
         //animator.SetBool("IsMoving", false);
         idleTimer += Time.deltaTime;
 
-        if (idleTimer >= idleTime && !isCharging && !isCooldown)
+        if (idleTimer >= idleTime)
         {
             currentState = State.Patrol;
             idleTimer = 0f;

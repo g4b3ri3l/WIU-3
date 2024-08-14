@@ -17,5 +17,5 @@ MonoBehaviour:
   damage: 20
   chaseSpeed: 2
   patrolSpeed: 2
-  chaseRange: 5
+  chaseRange: 7
   attackRange: 4
