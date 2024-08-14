@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class sceneSwitching : MonoBehaviour
 {
+    [SerializeField] string Nextlevel;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             // Task 2c - Load the scene using SceneManager.LoadScene()
-            SceneManager.LoadScene("level0");
+            SceneManager.LoadScene(Nextlevel);
         }
     }
 }
