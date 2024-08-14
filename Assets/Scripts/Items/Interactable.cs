@@ -6,7 +6,21 @@ public class Interactable : MonoBehaviour
 
     public CircleCollider2D circleCollider;
 
+    public Transform interactionPoint;
+
     public Transform player;
+
+    bool hasInteracted = false;
+
+    private void Start()
+    {
+        circleCollider.radius = radius;
+
+        if (interactionPoint == null)
+        {
+            interactionPoint = transform;
+        }
+    }
 
     public virtual void Interact()
     {
@@ -16,20 +30,28 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        circleCollider.radius = radius;
+        if (!hasInteracted)
+        {
+            Vector3 distance = interactionPoint.position - player.position;
 
-        Vector3 distance = transform.position - player.position;
+            if (Vector3.Magnitude(distance) <= radius)
+            {
+                Interact();
 
-        //if ()
-        //{
-
-        //}
+                hasInteracted = true;
+            }
+        }
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
+
+        if (interactionPoint == null)
+        {
+            interactionPoint = transform;
+        }
+        Gizmos.DrawWireSphere(interactionPoint.position, radius);
     }
 
 
