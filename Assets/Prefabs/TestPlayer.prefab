@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6479053001677440978, guid: 92094c648807d95409b7e75f40c2c80b, type: 3}
-  beam: {fileID: 8503464168466673692, guid: 467257c37e0edbf45a58ff433acf3448, type: 3}
+  beam: {fileID: 4321666686007768242, guid: 255a9846d73be8a4a935be548cf43568, type: 3}
   firePoint: {fileID: 4506392825851641888}
   speed: 10
   attackCooldown: 1
