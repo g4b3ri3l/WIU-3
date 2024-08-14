@@ -57,7 +57,7 @@ public class RangedController : MonoBehaviour
         }
         else if (attacking && cooldowntimer >= attackCooldown)
         {
-            //Charge Beam
+            //Charge testBeam
             cooldowntimer = 0;
             Vector2 aimTargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 AimDirection = (aimTargetPosition - (Vector2)rb.transform.position).normalized;
