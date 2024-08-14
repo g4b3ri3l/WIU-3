@@ -1013,10 +1013,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 9014026991223001262, guid: 69188855362c2734ba0abcad36132575, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1034,10 +1030,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1870672585}
-    - target: {fileID: 226714986655406785, guid: 48255ebb7c5ffcc4497964aa98d8af06, type: 3}
-      propertyPath: chargeSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 226714986655406785, guid: 48255ebb7c5ffcc4497964aa98d8af06, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 

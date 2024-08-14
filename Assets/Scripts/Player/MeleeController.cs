@@ -13,15 +13,8 @@ public class MeleeController : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] float cooldowntimer = 0;
 
-    TestEnemy enemy;
+    Enemy enemy;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -43,26 +36,6 @@ public class MeleeController : MonoBehaviour
         //    animator.SetBool("Melee", false);
         //}
         
-
-        ////Melee Attack
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (EnemyInSight())
-        //    {
-        //        cooldowntimer += Time.deltaTime;
-        //        if (cooldowntimer >= attackCooldown)
-        //        {
-        //            cooldowntimer = 0;
-        //            enemyHP.TakeDamage(10);
-        //            //SoundManager.instance.PlaySound(punch);
-        //            //animator.SetBool("Melee", true);
-        //        }
-        //    }
-        //}
-        ////else if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-        ////{
-        ////    animator.SetBool("Melee", false);
-        ////}
     }
 
     bool EnemyInSight()
@@ -79,7 +52,7 @@ public class MeleeController : MonoBehaviour
                 if (col.collider != null)
                 {
                     Debug.Log(col.collider != null);
-                    enemy = col.transform.GetComponent<TestEnemy>();
+                    enemy = col.transform.GetComponent<Enemy>();
                 }
                 else
                 {

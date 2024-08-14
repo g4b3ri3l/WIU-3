@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8397208418449583608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4506392825851641888}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4506392825851641888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397208418449583608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8324138566485980166}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9014026991223001262
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +45,8 @@ GameObject:
   - component: {fileID: 1155640129176562084}
   - component: {fileID: 6196698531519648411}
   - component: {fileID: 4826096100100632935}
+  - component: {fileID: 2328926219304391016}
+  - component: {fileID: 5446242659625949671}
   m_Layer: 7
   m_Name: TestPlayer
   m_TagString: Player
@@ -33,7 +66,8 @@ Transform:
   m_LocalPosition: {x: -11.34, y: -2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4506392825851641888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8300057481334661286
@@ -109,6 +143,9 @@ MonoBehaviour:
   dashPower: 3
   dashTime: 0.2
   dashCooldown: 1
+  stamina: 100
+  stamDrain: 0.5
+  stamRecov: 1
 --- !u!50 &1155640129176562084
 Rigidbody2D:
   serializedVersion: 4
@@ -202,3 +239,45 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   cooldowntimer: 0
+--- !u!114 &2328926219304391016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014026991223001262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590b7b04ad586234e923e2ac8277977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6479053001677440978, guid: 92094c648807d95409b7e75f40c2c80b, type: 3}
+  beam: {fileID: 8503464168466673692, guid: 467257c37e0edbf45a58ff433acf3448, type: 3}
+  firePoint: {fileID: 4506392825851641888}
+  speed: 10
+  attackCooldown: 1
+  cooldowntimer: 0
+  inputBuffer: 0.015
+  bufferTimer: 0
+  offset: 0
+--- !u!114 &5446242659625949671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014026991223001262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590b7b04ad586234e923e2ac8277977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6479053001677440978, guid: 92094c648807d95409b7e75f40c2c80b, type: 3}
+  beam: {fileID: 8503464168466673692, guid: 467257c37e0edbf45a58ff433acf3448, type: 3}
+  firePoint: {fileID: 4506392825851641888}
+  speed: 10
+  attackCooldown: 1
+  cooldowntimer: 0
+  inputBuffer: 0.015
+  bufferTimer: 0
+  offset: 0

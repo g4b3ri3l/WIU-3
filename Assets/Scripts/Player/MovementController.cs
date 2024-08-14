@@ -17,8 +17,11 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashTime = 0.2f;
     [SerializeField] float dashCooldown = 1f;
 
+    [SerializeField] float stamina = 100f;
+    [SerializeField] float stamDrain = 0.5f;
+    [SerializeField] float stamRecov = 1f;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
@@ -49,6 +52,21 @@ public class MovementController : MonoBehaviour
         {
             return;
         }
+
+        if (vert > 0)
+        {
+            stamina -= stamDrain;
+        }
+        else
+        {
+            stamina += stamRecov;
+
+            if (stamina >= 100f)
+            {
+                stamina = 100f;
+            }
+        }
+
         _rigid.velocity = new Vector2(hori * speed, vert * speed);
     }
 
