@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestBeam : MonoBehaviour
+public class Beam : MonoBehaviour
 {
     float delay = 0.5f;
     Vector3 expand = new Vector3(0.2f, 0, 0);
-    Health enemyhp;
+    Enemy enemy;
 
     RectTransform RectTransform;
 
@@ -34,13 +34,12 @@ public class TestBeam : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            enemyhp = collision.transform.GetComponent<Health>();
+            enemy = collision.transform.GetComponent<Enemy>();
 
-            enemyhp.TakeDamage(20);
+            enemy.TakeDamage(20);
 
             //Destroy(collision.gameObject);
             //Destroy(gameObject);
         }
     }
-
 }

@@ -13,9 +13,8 @@ public class MeleeController : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] float cooldowntimer = 0;
 
-    Health enemyHP;
+    Enemy enemy;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -28,7 +27,7 @@ public class MeleeController : MonoBehaviour
                 if (EnemyInSight())
                 {
                     cooldowntimer = 0;
-                    enemyHP.TakeDamage(1);
+                    enemy.TakeDamage(damage);
                 }
             }
         }
@@ -36,17 +35,36 @@ public class MeleeController : MonoBehaviour
         //{
         //    animator.SetBool("Melee", false);
         //}
+        
     }
 
     bool EnemyInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(box.bounds.center + transform.right * range * transform.localScale.x * colliderDist, new Vector3(box.bounds.size.x * range, box.bounds.size.y, box.bounds.size.z), 0, Vector2.right, 0, enemyLayer);
-        if (hit.collider != null)
+        RaycastHit2D[] hit = Physics2D.BoxCastAll(box.bounds.center + transform.right * range * transform.localScale.x * colliderDist, new Vector3(box.bounds.size.x * range, box.bounds.size.y, box.bounds.size.z), 0, Vector2.right, 0, enemyLayer);
+        if (hit == null)
         {
-            Debug.Log(hit.collider != null);
-            enemyHP = hit.transform.GetComponent<Health>();
+            return false;
         }
-        return hit.collider != null;
+        else
+        {
+            foreach (var col in hit)
+            {
+                if (col.collider != null)
+                {
+                    Debug.Log(col.collider != null);
+                    enemy = col.transform.GetComponent<Enemy>();
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+        
+
+        return hit != null;
+
     }
 
     private void OnDrawGizmos()

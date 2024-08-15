@@ -21,23 +21,21 @@ public class RangedController : MonoBehaviour
 
     bool attacking;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
             attacking = true;
         }
+        bufferTimer += Time.deltaTime;
 
         if (attacking && Input.GetMouseButtonUp(1))
         {
-            bufferTimer += Time.deltaTime;
             if (bufferTimer >= inputBuffer)
             {
                 bufferTimer = 0;
@@ -74,10 +72,6 @@ public class RangedController : MonoBehaviour
             cooldowntimer += Time.deltaTime;
         }
 
-        //else if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-        //{
-        //    animator.SetBool("Shoot", false);
-        //}
     }
 
     private void OnDrawGizmos()

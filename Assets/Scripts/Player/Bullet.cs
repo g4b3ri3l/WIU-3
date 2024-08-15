@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     float delay = 0.5f;
-    Health enemyhp;
+    Enemy enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -15,14 +15,21 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        Debug.Log("Collided with: " + collision.name);
 
         if (collision.CompareTag("Enemy"))
         {
-            enemyhp = collision.transform.GetComponent<Health>();
+            enemy = collision.transform.GetComponent<Enemy>();
 
-            enemyhp.TakeDamage(10);
-
+            if (enemy != null)
+            {
+                Debug.Log("Enemy component found: " + enemy.name);
+                enemy.TakeDamage(10);
+            }
+            else
+            {
+                Debug.LogError("Enemy component not found on: " + collision.name);
+            }
             //Destroy(collision.gameObject);
             Destroy(gameObject);
         }
