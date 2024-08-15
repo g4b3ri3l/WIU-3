@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6196698531519648411}
   - component: {fileID: 4826096100100632935}
   - component: {fileID: 2328926219304391016}
+  - component: {fileID: 2281639878176206756}
   m_Layer: 7
   m_Name: TestPlayer
   m_TagString: Player
@@ -153,14 +154,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9014026991223001262}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590b7b04ad586234e923e2ac8277977f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6479053001677440978, guid: 92094c648807d95409b7e75f40c2c80b, type: 3}
+  bullet: {fileID: 6479053001677440978, guid: f0390daf3b870994bbb466b19e4a6271, type: 3}
   beam: {fileID: 4321666686007768242, guid: 255a9846d73be8a4a935be548cf43568, type: 3}
   firePoint: {fileID: 4506392825851641888}
   speed: 10
@@ -259,3 +260,17 @@ MonoBehaviour:
   inputBuffer: 0.015
   bufferTimer: 0
   offset: 0
+--- !u!114 &2281639878176206756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014026991223001262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4544f0f59ec30aa45a150d825af729cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  space: 20
