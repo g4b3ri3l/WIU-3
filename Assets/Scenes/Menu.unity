@@ -159,7 +159,7 @@ MonoBehaviour:
   continueButton: {fileID: 1373932432}
   settingsButton: {fileID: 309385752}
   exitButton: {fileID: 746090611}
-  startScene: IntroLevel
+  startScene: SampleScene
   continueScene: SampleScene
   settingsPanel: {fileID: 53530736}
 --- !u!114 &28212706
