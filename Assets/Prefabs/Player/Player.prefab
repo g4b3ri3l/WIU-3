@@ -40,15 +40,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8324138566485980166}
-  - component: {fileID: 8300057481334661286}
-  - component: {fileID: 7432393648714187971}
+  - component: {fileID: 8357031655180643008}
   - component: {fileID: 1155640129176562084}
   - component: {fileID: 6196698531519648411}
+  - component: {fileID: 7432393648714187971}
   - component: {fileID: 4826096100100632935}
   - component: {fileID: 2328926219304391016}
   - component: {fileID: 2281639878176206756}
+  - component: {fileID: 1110180993318556717}
   m_Layer: 7
-  m_Name: TestPlayer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,14 +64,14 @@ Transform:
   m_GameObject: {fileID: 9014026991223001262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.34, y: -2.34, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4506392825851641888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8300057481334661286
+--- !u!212 &8357031655180643008
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +109,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1189354113
-  m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -101699022, guid: 931311eb7c65dd24bb125d167a717ce9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,30 +123,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7432393648714187971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014026991223001262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44ebe6fcc7ec95f41a2570e154547a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hori: 0
-  vert: 0
-  speed: 8
-  isfacingRight: 1
-  canDash: 1
-  isDashing: 0
-  dashPower: 3
-  dashTime: 0.2
-  dashCooldown: 1
-  stamina: 100
-  stamDrain: 0.5
-  stamRecov: 1
 --- !u!50 &1155640129176562084
 Rigidbody2D:
   serializedVersion: 4
@@ -172,7 +149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6196698531519648411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,6 +195,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7432393648714187971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014026991223001262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ebe6fcc7ec95f41a2570e154547a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  dashPower: 3
+  dashTime: 0.2
+  dashCooldown: 1
+  stamina: 100
+  stamDrain: 0.5
+  stamRecov: 1
+  localScaleX: 0
 --- !u!114 &4826096100100632935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,9 +253,7 @@ MonoBehaviour:
   firePoint: {fileID: 4506392825851641888}
   speed: 10
   attackCooldown: 1
-  cooldowntimer: 0
   inputBuffer: 0.015
-  bufferTimer: 0
   offset: 0
 --- !u!114 &2281639878176206756
 MonoBehaviour:
@@ -274,3 +269,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   space: 20
+--- !u!95 &1110180993318556717
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014026991223001262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44bc1282f2bdbea4d9c063dcff228003, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

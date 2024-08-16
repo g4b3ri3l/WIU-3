@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
     Rigidbody2D _rigid;
 
-    [SerializeField] float hori;
-    [SerializeField] float vert;
+    float hori;
+    float vert;
+    bool isfacingRight = true;
     [SerializeField] float speed = 8f;
-    [SerializeField] bool isfacingRight = true;
 
-    [SerializeField] bool canDash = true;
-    [SerializeField] bool isDashing;
+    bool canDash = true;
+    bool isDashing;
     [SerializeField] float dashPower = 3f;
     [SerializeField] float dashTime = 0.2f;
     [SerializeField] float dashCooldown = 1f;
@@ -21,10 +22,12 @@ public class MovementController : MonoBehaviour
     [SerializeField] float stamDrain = 0.5f;
     [SerializeField] float stamRecov = 1f;
 
+    float localScaleX;
 
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
+        localScaleX = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -74,11 +77,14 @@ public class MovementController : MonoBehaviour
     {
         if (isfacingRight && hori < 0f || !isfacingRight && hori > 0f)
         {
-            Vector3 localscale = transform.localScale;
             isfacingRight = !isfacingRight;
-            localscale.x *= -1f;
-            transform.localScale = localscale;
+            localScaleX *= -1f;
         }
+
+
+        transform.localScale = new Vector3(
+            Mathf.Lerp(transform.localScale.x, localScaleX, Time.deltaTime * 25f), 
+            transform.localScale.y, transform.localScale.z);
     }
 
     IEnumerator Dash()

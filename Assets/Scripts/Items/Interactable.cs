@@ -34,7 +34,9 @@ public class Interactable : MonoBehaviour
         {
             Vector3 distance = interactionPoint.position - player.position;
 
-            if (Vector3.Magnitude(distance) <= radius)
+            float distance2 = Vector3.Distance(new Vector3(player.position.x, player.position.y, player.position.z), new Vector3(interactionPoint.position.x, interactionPoint.position.y, interactionPoint.position.z));
+
+            if (distance2 <= radius)
             {
                 Interact();
 
@@ -42,7 +44,7 @@ public class Interactable : MonoBehaviour
             }
         }
     }
-
+        
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -10,10 +10,10 @@ public class RangedController : MonoBehaviour
     [SerializeField] float speed;
 
     [SerializeField] float attackCooldown;
-    [SerializeField] float cooldowntimer = 0;
+    float cooldowntimer = 0;
 
     [SerializeField] float inputBuffer;
-    [SerializeField] float bufferTimer = 0;
+    float bufferTimer = 0;
 
     [SerializeField] float offset;
 

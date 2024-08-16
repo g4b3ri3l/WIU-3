@@ -17,9 +17,9 @@ public class MeleeController : MonoBehaviour
 
     void Update()
     {
+        cooldowntimer += Time.deltaTime;
         if (Input.GetMouseButton(0))
         {
-            cooldowntimer += Time.deltaTime;
             if (cooldowntimer >= attackCooldown)
             {
                 //SoundManager.instance.PlaySound(punch);
@@ -61,10 +61,7 @@ public class MeleeController : MonoBehaviour
 
             }
         }
-        
-
         return hit != null;
-
     }
 
     private void OnDrawGizmos()
