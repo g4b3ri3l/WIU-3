@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad391db75f0c234198ee2073556cbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 70bf8ad2bcc102149900d5c644dee810, type: 2}
+  Stats: {fileID: 11400000, guid: 70bf8ad2bcc102149900d5c644dee810, type: 2}
   currHealth: 0
   damage: 0
   HealthBar: {fileID: 378180135338983575}
