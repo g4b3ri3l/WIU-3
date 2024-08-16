@@ -19,10 +19,7 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            gameObject.SetActive(!gameObject.activeSelf);
-        }
+
     }
 
     void UpdateUI()
