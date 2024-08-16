@@ -55,7 +55,4 @@ public class Interactable : MonoBehaviour
         }
         Gizmos.DrawWireSphere(interactionPoint.position, radius);
     }
-
-
-
 }

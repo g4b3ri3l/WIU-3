@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,11 +19,9 @@ public class ItemSlot : MonoBehaviour
         icon.enabled = false;
     }
 
-    public void UseItem()
+    public void DisplayItem()
     {
-        if (item != null)
-        {
-            item.Use();
-        }
+        DescriptionUI.instance.item = item;
+        DescriptionUI.instance.UpdateUI();
     }
 }

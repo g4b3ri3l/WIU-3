@@ -2,17 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+[CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
+public class Equipment : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int armourMod;
+    public int weaponMod;
 
-    // Update is called once per frame
-    void Update()
+    bool used = false;
+
+    public override void Use()
     {
-        
+        base.Use();
+
+        if (used == false)
+        {
+            RemoveFromInventory();
+            EquipmentManager.instance.Add(this);
+            used = true;
+        }
+        else
+        {
+            RemoveFromEquipment();
+            Inventory.instance.Add(this);
+            used = false;
+        }
+    }
+    public void RemoveFromEquipment()
+    {
+        EquipmentManager.instance.Remove(this);
     }
 }

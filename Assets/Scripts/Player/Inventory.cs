@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> items = new List<Item>();
-
-    public int space = 20;
-
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallBack;
-
     #region Singleton
+
     public static Inventory instance;
     void Awake()
     {
@@ -22,7 +16,15 @@ public class Inventory : MonoBehaviour
         }
         instance = this;
     }
+
     #endregion
+
+    public List<Item> items = new List<Item>();
+
+    public int space = 20;
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallBack;
 
     public bool Add(Item item)
     {
@@ -53,6 +55,4 @@ public class Inventory : MonoBehaviour
             onItemChangedCallBack.Invoke();
         }
     }
-
-
 }

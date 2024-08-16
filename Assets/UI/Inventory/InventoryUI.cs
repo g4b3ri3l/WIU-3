@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
-{
-
+{ 
     public Transform ItemsParent;
     Inventory inventory;
     ItemSlot[] slots;
+
     void Start()
     {
         inventory = Inventory.instance;
         inventory.onItemChangedCallBack += UpdateUI;
 
         slots = ItemsParent.GetComponentsInChildren<ItemSlot>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void UpdateUI()

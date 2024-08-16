@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Beam : MonoBehaviour
 {
-    float delay = 0.5f;
     Vector3 expand = new Vector3(0.2f, 0, 0);
     Enemy enemy;
 

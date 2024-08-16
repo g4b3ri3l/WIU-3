@@ -47,7 +47,9 @@ public class RangedController : MonoBehaviour
 
                 firePoint.transform.position = AimDirection;
 
-                GameObject bulletGO = Instantiate(bullet, firePoint.position + transform.position, bullet.transform.rotation);
+                var zAngle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg;
+
+                GameObject bulletGO = Instantiate(bullet, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
             }
