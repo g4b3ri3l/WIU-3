@@ -50,12 +50,18 @@ public class SwordFishAI : EnemyAI
         chaseSpeed = swordFishStats.chaseSpeed;
         patrolSpeed = swordFishStats.patrolSpeed;
         attackRange = swordFishStats.attackRange;
+
+        swordFish = GetComponent<SwordFish>();
+
+        player = GameObject.Find("Player").transform;
     }
 
     protected override void Update()
     {
         //navAgent.SetDestination(player.position);
-
+        Vector3 position = transform.position;
+        position.z = 0f;  // Ensure the Z-position remains 0
+        transform.position = position;
         //FSM
         switch (currentState)
         {

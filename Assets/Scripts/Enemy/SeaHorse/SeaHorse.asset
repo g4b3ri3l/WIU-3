@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f163ad5b2b45fc240b54823076372752, type: 3}
-  m_Name: BaseEnemy
+  m_Name: SeaHorse
   m_EditorClassIdentifier: 
-  enemyName: BaseEnemy
+  enemyName: Sea Horse
   maxHealth: 100
   damage: 5
   chaseSpeed: 3.5
   patrolSpeed: 2
-  chaseRange: 5
-  attackRange: 2
+  chaseRange: 8
+  attackRange: 5
