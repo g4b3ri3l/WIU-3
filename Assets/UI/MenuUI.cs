@@ -7,20 +7,20 @@ using UnityEngine.UI;
 public class MenuUI : MonoBehaviour
 {
     [SerializeField] private Button newStartButton, continueButton, settingsButton, exitButton;
-    [SerializeField] private string startScene, continueScene;
-    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private string continueScene;
+    [SerializeField] private GameObject settingsPanel, loadingPanel;
     void Start()
     {
-         settingsPanel.SetActive(false);
+        settingsPanel.SetActive(false);
         newStartButton.onClick.AddListener(newStart);
         continueButton.onClick.AddListener(ContinueStart);
         settingsButton.onClick.AddListener(Settings);
         exitButton.onClick.AddListener(Application.Quit);
     }
 
-    void newStart()
+    public void newStart()
     {
-        SceneManager.LoadScene(startScene);
+        //loadingPanel.transform.position = new Vector3 (loadingPanel.transform.position.x, loadingPanel.transform.position.y + 1000, 0);
     }
 
     void ContinueStart()
