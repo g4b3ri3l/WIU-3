@@ -8,6 +8,8 @@ public class PlayerData : MonoBehaviour, IDataPersistance
     [SerializeField] private float health;
     [SerializeField] private float stamina;
     [SerializeField] private float damage;
+    [SerializeField] private float maxHp;
+    [SerializeField] private float maxStamina;
 
     [SerializeField] int hp_up;
     [SerializeField] int stam_up;
@@ -16,7 +18,9 @@ public class PlayerData : MonoBehaviour, IDataPersistance
     private void Start()
     {
         health = 100f;
+        maxHp = 100f;
         stamina = 100f;
+        maxStamina = 100f;
         damage = 1f;
 
         hp_up = 0;
@@ -24,22 +28,25 @@ public class PlayerData : MonoBehaviour, IDataPersistance
         dmg_up = 0;
     }
 
+
     public void HealthUP()
     {
         hp_up++;
         health = 100f + hp_up * 10f;
+        maxHp = health;
     }
 
     public void StaminaUP()
     {
         stam_up++;
         stamina = 100f + stam_up * 10f;
+        maxStamina = stamina;
     }
 
     public void DamageUP()
     {
         dmg_up++;
-        damage = 100f + dmg_up * 10f;
+        damage = 1f + dmg_up;
     }
 
     public void LoadData(GameData data)
@@ -47,13 +54,28 @@ public class PlayerData : MonoBehaviour, IDataPersistance
         this.health = data.health;
         this.transform.position = data.playerPos;
 
-        this.stamina = data.stamina;
-        this.damage = data.damage;
+        this.hp_up = data.hp_up;
+        this.dmg_up = data.dmg_up;
+        this.stam_up = data.stam_up;
+
+
+
+        this.stamina = 100f + this.stam_up * 10f;
+        this.maxStamina = this.stamina;
+
+        this.maxHp = 100f + this.hp_up * 10f;
+
+        this.damage = 1f + this.dmg_up;
+
     }
 
     public void SaveData(ref GameData data)
     {
         data.health = this.health;
         data.playerPos = this.transform.position;
+
+        data.hp_up =this.hp_up;
+        data.dmg_up = this.dmg_up;
+        data.stam_up = this.stam_up;
     }
 }
