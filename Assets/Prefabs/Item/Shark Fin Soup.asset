@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Shark Fin Soup
   description: Tastes really good, if shrimps could taste that is.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 29b953f978599b94fa0174794df1fb5c, type: 3}
   isDefaultItem: 0
