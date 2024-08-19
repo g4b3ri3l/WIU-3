@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Purifying Grenade
   description: A bomb of fresh water!
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c469c93f652760549afaf66e12d2a6cd, type: 3}
   isDefaultItem: 0
-  itemCount: 2
+  itemCount: 3
