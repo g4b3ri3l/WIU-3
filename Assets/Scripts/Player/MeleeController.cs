@@ -41,7 +41,7 @@ public class MeleeController : MonoBehaviour
     bool EnemyInSight()
     {
         RaycastHit2D[] hit = Physics2D.BoxCastAll(box.bounds.center + transform.right * range * transform.localScale.x * colliderDist, new Vector3(box.bounds.size.x * range, box.bounds.size.y, box.bounds.size.z), 0, Vector2.right, 0, enemyLayer);
-        if (hit == null)
+        if (hit.Length < 1)
         {
             return false;
         }

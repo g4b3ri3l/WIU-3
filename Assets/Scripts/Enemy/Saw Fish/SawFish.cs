@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class TestEnemy : Enemy
+public class SawFish : Enemy
 {
     [SerializeField] private EnemyStats Stats;  // Reference to ScriptableObject with common enemy data
 

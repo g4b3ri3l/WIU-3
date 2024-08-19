@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TestEnemyAI : EnemyAI
+public class SawFishAI : EnemyAI
 {
     [SerializeField] private State currState;
 
@@ -19,7 +19,7 @@ public class TestEnemyAI : EnemyAI
     [SerializeField] private float idleTimer = 0f;
 
     [SerializeField] private EnemyStats testStats;
-    [SerializeField] private TestEnemy enemy;
+    [SerializeField] private SawFish enemy;
     //protected Animator animator;
 
     protected override void Start()
@@ -36,7 +36,7 @@ public class TestEnemyAI : EnemyAI
         patrolSpeed = testStats.patrolSpeed;
         attackRange = testStats.attackRange;
 
-        enemy = GetComponent<TestEnemy>();
+        enemy = GetComponent<SawFish>();
     }
 
     protected override void Update()
