@@ -8,14 +8,24 @@ public class GUIManager : MonoBehaviour
     [SerializeField] GameObject pause;
 
 
-    bool isInventoryShowing = false;
+
+    bool flipping = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            isInventoryShowing = !isInventoryShowing;
-            inventoryPanels.SetActive(isInventoryShowing);
+            //inventoryPanels.SetActive(!inventoryPanels.activeSelf);
+            if (flipping)
+            {
+                inventoryPanels.transform.position = new Vector3(inventoryPanels.transform.position.x, inventoryPanels.transform.position.y - 1000, 0);
+            }
+            else
+            {
+                inventoryPanels.transform.position = new Vector3(inventoryPanels.transform.position.x, inventoryPanels.transform.position.y + 1000, 0);
+            }
+
+            flipping = !flipping;
         }
 
         if (Input.GetKeyDown(KeyCode.P))

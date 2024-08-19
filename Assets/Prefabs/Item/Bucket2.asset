@@ -16,3 +16,4 @@ MonoBehaviour:
   description: It'll take more work to clean up those chemicals though.
   icon: {fileID: 482259049, guid: 30161c152494e4140a40b4fc0e4acd61, type: 3}
   isDefaultItem: 0
+  itemCount: 0
