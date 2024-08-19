@@ -17,6 +17,8 @@ public class RangedController : MonoBehaviour
 
     [SerializeField] float offset;
 
+    [SerializeField] AudioSource shootingAudioSource;  // Reference to the AudioSource component
+
     Rigidbody2D rb;
 
     bool attacking;
@@ -41,7 +43,10 @@ public class RangedController : MonoBehaviour
                 bufferTimer = 0;
                 cooldowntimer = 0;
 
-                //Normal Bullets
+                // Play the shooting audio
+                shootingAudioSource.Play();
+
+                // Normal Bullets
                 Vector2 aimTargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 AimDirection = (aimTargetPosition - (Vector2)rb.transform.position).normalized;
 
@@ -55,8 +60,12 @@ public class RangedController : MonoBehaviour
         }
         else if (attacking && cooldowntimer >= attackCooldown)
         {
-            //Charge testBeam
+            // Charge testBeam
             cooldowntimer = 0;
+
+            // Play the shooting audio
+            shootingAudioSource.Play();
+
             Vector2 aimTargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 AimDirection = (aimTargetPosition - (Vector2)rb.transform.position).normalized;
 
@@ -71,7 +80,6 @@ public class RangedController : MonoBehaviour
         {
             cooldowntimer += Time.deltaTime;
         }
-
     }
 
     private void OnDrawGizmos()
