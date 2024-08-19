@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquipmentManager : MonoBehaviour
+public class EquipmentManager : MonoBehaviour, IDataPersistance
 {
     #region Singleton
     public static EquipmentManager instance;
@@ -14,7 +14,7 @@ public class EquipmentManager : MonoBehaviour
 
     #endregion
 
-    public List<Equipment> equipment = new List<Equipment>();
+    public List<Equipment> equipment;
     public int space = 3;
 
     public delegate void OnEquipmentChanged();
@@ -48,5 +48,19 @@ public class EquipmentManager : MonoBehaviour
         {
             onEquipmentChanged.Invoke();
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.equipment = data.equipment;
+        if (onEquipmentChanged != null)
+        {
+            onEquipmentChanged.Invoke();
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.equipment = this.equipment;
     }
 }
