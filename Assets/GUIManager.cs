@@ -7,6 +7,7 @@ public class GUIManager : MonoBehaviour
    [SerializeField] GameObject inventoryPanels;
    [SerializeField] GameObject pause;
 
+
     bool flipping = false;
 
     void Update()
