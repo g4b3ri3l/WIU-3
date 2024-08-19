@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour, IDataPersistance
 {
+    [SerializeField] AudioSource collectingAudioSource;
     #region Singleton
 
     public static Inventory instance;
@@ -45,7 +46,7 @@ public class Inventory : MonoBehaviour, IDataPersistance
             }
 
             items.Add(item);
-
+            collectingAudioSource.Play();
             if (onItemChangedCallBack != null)
             {
                 onItemChangedCallBack.Invoke();

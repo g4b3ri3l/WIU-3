@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     [SerializeField] int hp_up;
     [SerializeField] int stam_up;
     [SerializeField] int dmg_up;
+    [SerializeField] AudioSource DamageAudioSource;
 
     private void Start()
     {
@@ -91,6 +92,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     public void TakeDamage(float dmg)
     {
         health -= dmg;
+        DamageAudioSource.Play();
     }
 
     public void Die()
