@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: ab3a045b400d42c47b9b91b654d733da, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -846,6 +850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: eff8e267a5693084086e33b4c55bb81d, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -75276,6 +75284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 626171fbac20b884c8f9c52b4545b9c5, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -75390,6 +75402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 90306bec9ba8db44094595566817c22f, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -75504,6 +75520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 60619b54765dc804b97684023797d5cb, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -76177,6 +76197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 323f8750dba20eb4db0101d72cd7b50d, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -77544,6 +77568,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 62426d1983d162544ad21b0b00266868, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -78076,6 +78104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c02579e398d6bc468fdac937127b1ff, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -78574,6 +78606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e35a55febbeab247abcd1cf3a7e653e, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -78954,6 +78990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: a88e8c2ebd1edf5418bd3bc20f4681f1, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -79368,6 +79408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 63087e28c33753a4c980b4ffba9c01f8, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -79784,9 +79828,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 749732207}
   dialogueText: {fileID: 1703263668}
-  dialogue:
-  - Hello!
-  - This is a test!
+  L1firstTimeDialogue:
+  - test
+  L1repeatDialogue:
+  - test
+  L2firstTimeDialogue: []
+  L2repeatDialogue: []
+  L3firstTimeDialogue: []
+  L3repeatDialogue: []
+  hasSpokenBefore: 0
   wordSpeed: 0.06
   playerIsClose: 0
   button: {fileID: 466461341}
@@ -79943,6 +79993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 351e3d96a44565b42958e4714023a477, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -80353,6 +80407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Container ver2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5981925021550166609, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: ea226cd001111c74386e96a99f0673f1, type: 2}
     - target: {fileID: 5990797753071119950, guid: 144e10df6c0fa0449810214b5bc18506, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

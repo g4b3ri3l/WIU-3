@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8696665362885311356}
   - component: {fileID: 6512902276553854529}
   - component: {fileID: 7207367279396537021}
-  - component: {fileID: -9018871646320701965}
+  - component: {fileID: 5981925021550166609}
   m_Layer: 5
   m_Name: Item Container ver2
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -9018871646320701965}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: itemslot2, Assembly-CSharp
         m_MethodName: DisplayItem
         m_Mode: 1
@@ -136,7 +136,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-9018871646320701965
+--- !u!114 &5981925021550166609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3797277860053684794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe3f6115e510404b89165935d32fd75, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a3c318a2d3b6347a7f201bdf73026c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 0c02579e398d6bc468fdac937127b1ff, type: 2}
+  item: {fileID: 0}
   disabled: {fileID: 8528093708912250110}
 --- !u!1 &3931733509255057166
 GameObject:

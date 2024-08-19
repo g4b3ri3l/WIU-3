@@ -17,7 +17,8 @@ public class RangedController : MonoBehaviour
 
     [SerializeField] float offset;
 
-    [SerializeField] AudioSource shootingAudioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip shootingClip;
 
     Rigidbody2D rb;
 
@@ -44,7 +45,7 @@ public class RangedController : MonoBehaviour
                 cooldowntimer = 0;
 
                 // Play the shooting audio
-                shootingAudioSource.Play();
+               audioSource.PlayOneShot(shootingClip);
 
                 // Normal Bullets
                 Vector2 aimTargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -66,7 +67,7 @@ public class RangedController : MonoBehaviour
             cooldowntimer = 0;
 
             // Play the shooting audio
-            shootingAudioSource.Play();
+            audioSource.PlayOneShot(shootingClip); 
 
             Vector2 aimTargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 AimDirection = (aimTargetPosition - (Vector2)rb.transform.position).normalized;
