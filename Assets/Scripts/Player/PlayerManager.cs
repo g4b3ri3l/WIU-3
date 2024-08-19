@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private float health;
-
+    [SerializeField] AudioSource DamageAudioSource;
 
     private void Start()
     {
@@ -36,6 +36,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     public void TakeDamage(float dmg)
     {
         health -= dmg;
+        DamageAudioSource.Play();
     }
 
     public void Die()
