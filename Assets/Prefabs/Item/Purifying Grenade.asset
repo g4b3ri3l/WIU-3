@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abaccdc1b8627fd45a5aa297d999de02, type: 3}
   m_Name: Purifying Grenade
   m_EditorClassIdentifier: 
-  name: New Item
-  description: An Item
+  name: Purifying Grenade
+  description: A bomb of fresh water!
   icon: {fileID: 0}
   isDefaultItem: 0
+  itemCount: 2
