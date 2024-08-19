@@ -21,6 +21,8 @@ public class ItemSlot : MonoBehaviour
 
     public void DisplayItem()
     {
+        if (item == null)
+            return;
         DescriptionUI.instance.item = item;
         DescriptionUI.instance.UpdateUI();
     }

@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
     ItemSlot[] slots;
 
-    void Start()
+    public void Start()
     {
         inventory = Inventory.instance;
         inventory.onItemChangedCallBack += UpdateUI;

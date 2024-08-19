@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abaccdc1b8627fd45a5aa297d999de02, type: 3}
   m_Name: Bucket2
   m_EditorClassIdentifier: 
-  name: Bucket of Chemicals
+  name: Bucket of Oil
   description: It'll take more work to clean up those chemicals though.
-  icon: {fileID: 0}
+  icon: {fileID: 482259049, guid: 30161c152494e4140a40b4fc0e4acd61, type: 3}
   isDefaultItem: 0
   itemCount: 0

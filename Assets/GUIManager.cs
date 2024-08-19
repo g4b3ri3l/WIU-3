@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GUIManager : MonoBehaviour
 {
-   [SerializeField] GameObject inventoryPanels;
-   [SerializeField] GameObject pause;
+    [SerializeField] GameObject inventoryPanels;
+    [SerializeField] GameObject pause;
+
 
 
     bool flipping = false;
