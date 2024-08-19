@@ -216,6 +216,7 @@ MonoBehaviour:
   stamina: 100
   stamDrain: 0.5
   stamRecov: 1
+  playerData: {fileID: 4237169684586137745}
 --- !u!114 &4826096100100632935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   cooldowntimer: 0
+  playerData: {fileID: 4237169684586137745}
 --- !u!114 &2328926219304391016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,4 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106bb12fdf3eb143a19ecb5a72f1bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
+  stam: 100
+  dmg: 1
