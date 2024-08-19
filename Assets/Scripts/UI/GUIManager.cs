@@ -6,7 +6,7 @@ public class GUIManager : MonoBehaviour
 {
     [SerializeField] GameObject inventoryPanels;
     [SerializeField] GameObject pause;
-
+    [SerializeField] GameObject saveUI;
 
 
     bool isInventoryActive = false;
@@ -25,5 +25,12 @@ public class GUIManager : MonoBehaviour
             if (Time.timeScale == 0) Time.timeScale = 1;
             else Time.timeScale = 0;
         }
+
+
+    }
+
+    public void CloseSaveUI()
+    {
+        saveUI.SetActive(false);
     }
 }
