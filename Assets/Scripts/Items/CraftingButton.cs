@@ -10,9 +10,13 @@ public class CraftingButton : MonoBehaviour
     [SerializeField] private int[] materialsNeeded;
     [SerializeField] private int craftedAmount = 1;
     [SerializeField] private GameObject disabler;
-    [SerializeField] Button buttoncraft;
+    private Button buttoncraft;
     private int craftcheck = 0;
     private bool craftcheckbool = false;
+    private void Start()
+    {
+        buttoncraft = GetComponent<Button>();
+    }
     void Update()
     {
         craftcheckbool = true;

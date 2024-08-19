@@ -13,11 +13,12 @@ public class ItemPickUp : Interactable
     void PickUp()
     {
         Debug.Log("Pick Up " + item.name);
-
+        
         //Add item into inventory
         bool success = Inventory.instance.Add(item);
         if (success)
         {
+            item.itemCount +=1;
             Destroy(gameObject);
         }
     }
