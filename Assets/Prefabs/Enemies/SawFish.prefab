@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 7437630403099148987}
   - component: {fileID: 4920952456179273444}
   m_Layer: 6
-  m_Name: TestEnemy
+  m_Name: SawFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testCurrentState: 0
-  testPlayer: {fileID: 0}
+  testPlayer: {fileID: 8324138566485980166, guid: 69188855362c2734ba0abcad36132575, type: 3}
   testChaseRange: 0
   testAttackRange: 0
   testPatrolSpeed: 0
