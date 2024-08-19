@@ -4,22 +4,83 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField] string[] dialogue;
+
+    [Header("Level1")]
+    [SerializeField] string[] L1firstTimeDialogue;
+    [SerializeField] string[] L1repeatDialogue;
+                              
+    [Header("Level2")]        
+    [SerializeField] string[] L2firstTimeDialogue;
+    [SerializeField] string[] L2repeatDialogue;
+                             
+    [Header("Level3")]       
+    [SerializeField] string[] L3firstTimeDialogue;
+    [SerializeField] string[] L3repeatDialogue;
+
+    [SerializeField] bool hasSpokenBefore;
+
+    private string[] dialogue;
+
+
+
     private int index;
+
 
     [SerializeField] private float wordSpeed;
     [SerializeField] private bool playerIsClose;
 
     [SerializeField] private GameObject button;
 
+    private void Start()
+    {
+        hasSpokenBefore = false;
+    }
+
     void Update()
     {
+        
+
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if(hasSpokenBefore)
+            {
+                dialogue = L1firstTimeDialogue;
+            }
+            else
+            {
+                dialogue = L1repeatDialogue;
+            }
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            if (hasSpokenBefore)
+            {
+                dialogue = L2firstTimeDialogue;
+            }
+            else
+            {
+                dialogue = L2repeatDialogue;
+            }
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            if (hasSpokenBefore)
+            {
+                dialogue = L3firstTimeDialogue;
+            }
+            else
+            {
+                dialogue = L3repeatDialogue;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)
@@ -33,7 +94,8 @@ public class NPC : MonoBehaviour
             }
         }
 
-        if(dialogueText.text == dialogue[index])
+
+        if (dialogueText.text == dialogue[index])
         {
             button.SetActive(true);
         }
