@@ -46,6 +46,9 @@ public class SwordFishAI : EnemyAI
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
 
+        player = GameObject.Find("Player").transform;
+
+
         chaseRange = swordFishStats.chaseRange;
         chaseSpeed = swordFishStats.chaseSpeed;
         patrolSpeed = swordFishStats.patrolSpeed;
@@ -84,8 +87,12 @@ public class SwordFishAI : EnemyAI
 
         if (idleTimer >= idleTime)
         {
-            currentState = State.Patrol;
-            idleTimer = 0f;
+            if (patrolPoints.Length > 0)
+            {
+
+                currentState = State.Patrol;
+                idleTimer = 0f;
+            }
         }
 
         // Check if player is within chase range

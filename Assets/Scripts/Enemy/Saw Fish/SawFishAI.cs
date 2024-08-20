@@ -37,6 +37,7 @@ public class SawFishAI : EnemyAI
         attackRange = testStats.attackRange;
 
         enemy = GetComponent<SawFish>();
+        player = GameObject.Find("Player").transform;
     }
 
     protected override void Update()
@@ -71,8 +72,12 @@ public class SawFishAI : EnemyAI
 
         if (idleTimer >= idleTime)
         {
-            currState = State.Patrol;
-            idleTimer = 0f;
+            if(patrolPoints.Length > 0)
+            {
+
+                currState = State.Patrol;
+                idleTimer = 0f;
+            }
         }
 
         // Check if player is within chase range
