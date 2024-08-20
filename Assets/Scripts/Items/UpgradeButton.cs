@@ -38,6 +38,9 @@ public class UpgradeButton : MonoBehaviour
 
     public void Upgrade()
     {
-        //boo
+        for (int i = 0; i < materials.Length; i++)
+        {
+            materials[i].itemCount -= materialsNeeded[i];
+        }
     }
 }

@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5981925021550166609}
         m_TargetAssemblyTypeName: itemslot2, Assembly-CSharp
         m_MethodName: DisplayItem
         m_Mode: 1

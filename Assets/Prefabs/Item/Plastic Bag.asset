@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Turtles often mistake this for food. I hope they like eating macroplastics.
   icon: {fileID: 21300000, guid: 3f84c7ff2bae2ac46b41d5e48a86dc9c, type: 3}
   isDefaultItem: 0
+  itemCount: 0

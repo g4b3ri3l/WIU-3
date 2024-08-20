@@ -16,3 +16,4 @@ MonoBehaviour:
   description: It can hold anything in it
   icon: {fileID: -1955570329, guid: 30161c152494e4140a40b4fc0e4acd61, type: 3}
   isDefaultItem: 0
+  itemCount: 0

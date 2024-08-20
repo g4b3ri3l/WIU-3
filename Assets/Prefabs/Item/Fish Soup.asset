@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Tastes really good.
   icon: {fileID: 21300000, guid: 2d2737b4232bcc24092287778dca414f, type: 3}
   isDefaultItem: 0
+  itemCount: 0
