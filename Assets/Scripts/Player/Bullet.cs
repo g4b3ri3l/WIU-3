@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    float delay = 0.5f;
+    public float delay = 0.5f;
     Enemy enemy;
 
     // Start is called before the first frame update
