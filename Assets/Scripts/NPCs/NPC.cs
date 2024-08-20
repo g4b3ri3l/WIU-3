@@ -36,11 +36,12 @@ public class NPC : MonoBehaviour
     [SerializeField] private float wordSpeed;
     [SerializeField] private bool playerIsClose;
 
-    [SerializeField] private GameObject button;
+    [SerializeField] private Button button;
 
     private void Start()
     {
         hasSpokenBefore = false;
+        button.onClick.AddListener(NextLine);
     }
 
     void Update()
@@ -49,7 +50,7 @@ public class NPC : MonoBehaviour
 
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if(hasSpokenBefore)
+            if(!hasSpokenBefore)
             {
                 dialogue = L1firstTimeDialogue;
             }
@@ -60,7 +61,7 @@ public class NPC : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if (hasSpokenBefore)
+            if (!hasSpokenBefore)
             {
                 dialogue = L2firstTimeDialogue;
             }
@@ -71,7 +72,7 @@ public class NPC : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            if (hasSpokenBefore)
+            if (!hasSpokenBefore)
             {
                 dialogue = L3firstTimeDialogue;
             }
@@ -91,13 +92,14 @@ public class NPC : MonoBehaviour
             {
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
+                
             }
         }
 
 
         if (dialogueText.text == dialogue[index])
         {
-            button.SetActive(true);
+            button.gameObject.SetActive(true);
         }
     }
 
@@ -119,7 +121,7 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
-        button.SetActive(false);
+        button.gameObject.SetActive(false);
 
         if (index < dialogue.Length - 1)
         {
@@ -129,6 +131,10 @@ public class NPC : MonoBehaviour
         }
         else
         {
+            if (dialogue == L1firstTimeDialogue || dialogue == L2firstTimeDialogue || dialogue == L3firstTimeDialogue)
+            {
+                hasSpokenBefore = true;
+            }
             zeroText();
         }
     }
