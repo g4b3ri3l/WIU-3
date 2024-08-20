@@ -16,4 +16,4 @@ MonoBehaviour:
   description: Useful for drinking, not when you live underwater though.
   icon: {fileID: 21300000, guid: c3464dc22c8466f40a5f0dcd1a9604b4, type: 3}
   isDefaultItem: 0
-  itemCount: 0
+  itemCount: 5

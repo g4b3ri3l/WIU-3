@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Remains of the enemies. Makes for a good soup base.
   icon: {fileID: 21300000, guid: bc2b93edebad6f6428f4851f2ec12c90, type: 3}
   isDefaultItem: 0
+  itemCount: 5

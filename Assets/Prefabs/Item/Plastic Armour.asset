@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Better use for plastic than letting it float in the Ocean
   icon: {fileID: 21300000, guid: 2c5d0ca33d0bb5b43a7d0bc2317bb8e6, type: 3}
   isDefaultItem: 0
-  itemCount: 0
+  itemCount: 2
   armourMod: 4
   weaponMod: 0

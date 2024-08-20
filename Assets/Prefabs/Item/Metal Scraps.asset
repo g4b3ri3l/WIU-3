@@ -16,4 +16,4 @@ MonoBehaviour:
   description: Could be Zinc, could be Steel.
   icon: {fileID: 21300000, guid: fa677385948643f408caba78c0666620, type: 3}
   isDefaultItem: 0
-  itemCount: 0
+  itemCount: 5
