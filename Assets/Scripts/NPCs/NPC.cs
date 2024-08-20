@@ -12,6 +12,9 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
 
+    [SerializeField] private GameObject interaction;
+
+
     [Header("Level1")]
     [SerializeField] string[] L1firstTimeDialogue;
     [SerializeField] string[] L1repeatDialogue;
@@ -108,6 +111,7 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        interaction.SetActive(true);
     }
 
     IEnumerator Typing()
