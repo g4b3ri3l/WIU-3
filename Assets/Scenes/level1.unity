@@ -765,8 +765,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Craft
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1870672586}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
         m_MethodName: StaminaUP
         m_Mode: 1
@@ -1439,8 +1439,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Close
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1961,8 +1961,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -81650,7 +81650,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 327153638}
         m_TargetAssemblyTypeName: CraftAndUpgradeUI, Assembly-CSharp
         m_MethodName: UpgradePanel
         m_Mode: 1
@@ -82263,7 +82263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 327153638}
         m_TargetAssemblyTypeName: CraftAndUpgradeUI, Assembly-CSharp
         m_MethodName: CancelPanels
         m_Mode: 1
@@ -82814,8 +82814,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue from last save
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -83983,7 +83983,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 327153638}
         m_TargetAssemblyTypeName: CraftAndUpgradeUI, Assembly-CSharp
         m_MethodName: CraftPanel
         m_Mode: 1
@@ -85085,9 +85085,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1870672586}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: StaminaUP
+        m_MethodName: DamageUP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -85400,7 +85400,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1870672586}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
         m_MethodName: HealthUP
         m_Mode: 1
@@ -86709,8 +86709,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Upgrade
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -87085,7 +87085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1711769199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -88011,6 +88011,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8324138566485980166, guid: 69188855362c2734ba0abcad36132575, type: 3}
   m_PrefabInstance: {fileID: 9126904430786120139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870672586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4237169684586137745, guid: 69188855362c2734ba0abcad36132575, type: 3}
+  m_PrefabInstance: {fileID: 9126904430786120139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d106bb12fdf3eb143a19ecb5a72f1bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1873821325
 GameObject:
   m_ObjectHideFlags: 0
@@ -88586,8 +88597,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: YOU DIED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
-  m_sharedMaterial: {fileID: -2749018159714802490, guid: f829e7c4474ec4940af139ca85a4537c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
