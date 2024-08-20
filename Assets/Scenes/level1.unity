@@ -77294,6 +77294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29428f258416a53498b668357fa1a1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
+  masterVolumeSlider: {fileID: 0}
+  masterVolumeName: 
 --- !u!114 &683484241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77306,6 +77309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29428f258416a53498b668357fa1a1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
+  masterVolumeSlider: {fileID: 0}
+  masterVolumeName: 
 --- !u!114 &683484242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77318,6 +77324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29428f258416a53498b668357fa1a1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 0}
+  masterVolumeSlider: {fileID: 0}
+  masterVolumeName: 
 --- !u!1 &685896809
 GameObject:
   m_ObjectHideFlags: 0
@@ -82498,6 +82507,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 466461343}
     - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
       propertyPath: dialogueText
       value: 
