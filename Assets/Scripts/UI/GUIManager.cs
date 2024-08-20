@@ -7,9 +7,11 @@ public class GUIManager : MonoBehaviour
     [SerializeField] GameObject inventoryPanels;
     [SerializeField] GameObject pause;
     [SerializeField] GameObject saveUI;
-
+    [SerializeField] GameObject deathUI;
+    [SerializeField] PlayerManager playerManager;
 
     bool isInventoryActive = false;
+    
 
     void Update()
     {
@@ -25,8 +27,7 @@ public class GUIManager : MonoBehaviour
             if (Time.timeScale == 0) Time.timeScale = 1;
             else Time.timeScale = 0;
         }
-
-
+        deathUI.SetActive(!playerManager.alive);
     }
 
     public void CloseSaveUI()

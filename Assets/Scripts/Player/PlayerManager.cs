@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDataPersistance
@@ -10,6 +11,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     [SerializeField] private float damage;
     [SerializeField] private float maxHp;
     [SerializeField] private float maxStamina;
+    public bool alive = true;
+
 
     [SerializeField] int hp_up;
     [SerializeField] int stam_up;
@@ -30,6 +33,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         dmg_up = 0;
     }
 
+    
 
     public void HealthUP()
     {
@@ -99,6 +103,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     public void Die()
     {
         // TODO: death logic, switch scenes, i.e
+        alive = false;
         this.gameObject.SetActive(false);
         Debug.Log("Player has died");
     }
