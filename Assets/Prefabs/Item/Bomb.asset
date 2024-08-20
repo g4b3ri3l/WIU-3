@@ -16,4 +16,4 @@ MonoBehaviour:
   description: It explodes
   icon: {fileID: 21300000, guid: 80c8414064894ec44a26a94e624a4b41, type: 3}
   isDefaultItem: 0
-  itemCount: 5
+  itemCount: 12

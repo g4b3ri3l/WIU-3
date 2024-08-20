@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDataPersistance
 {
-    [SerializeField] private float health;
-    [SerializeField] private float stamina;
-    [SerializeField] private float damage;
-    [SerializeField] private float maxHp;
-    [SerializeField] private float maxStamina;
+    [SerializeField] public float health;
+    [SerializeField] public float stamina;
+    [SerializeField] public float damage;
+    [SerializeField] public float maxHp;
+    [SerializeField] public float maxStamina;
     public bool alive = true;
 
 
@@ -111,6 +111,17 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
             damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
         }
     }
+
+    public void Heal(float amount)
+    {
+        health += amount;
+        if (health> maxHp)
+        {
+            health = maxHp;
+        }
+    }
+
+
 
     public void Die()
     {
