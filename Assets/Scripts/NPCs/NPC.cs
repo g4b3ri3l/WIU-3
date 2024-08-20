@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
@@ -26,7 +27,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] bool hasSpokenBefore;
 
-    private string[] dialogue;
+    public string[] dialogue;
 
 
 
@@ -49,7 +50,7 @@ public class NPC : MonoBehaviour
 
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if(hasSpokenBefore)
+            if(!hasSpokenBefore)
             {
                 dialogue = L1firstTimeDialogue;
             }
@@ -60,7 +61,7 @@ public class NPC : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if (hasSpokenBefore)
+            if (!hasSpokenBefore)
             {
                 dialogue = L2firstTimeDialogue;
             }
@@ -71,7 +72,7 @@ public class NPC : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            if (hasSpokenBefore)
+            if (!hasSpokenBefore)
             {
                 dialogue = L3firstTimeDialogue;
             }
@@ -81,24 +82,40 @@ public class NPC : MonoBehaviour
             }
         }
 
+        int count = 0;
+
+        foreach (string s in dialogue)
+        {
+            Debug.Log(s);
+
+            count++;
+        }
+
+        Debug.Log(dialogue.Length);
+
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-            if (dialoguePanel.activeInHierarchy)
-            {
-                zeroText();
-            }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
-            }
-        }
+            //if (dialoguePanel.activeInHierarchy)
+            //{
+            //    zeroText();
+            //}
+            //else
+            //{
+            //    dialoguePanel.SetActive(true);
+            //    StartCoroutine(Typing());
+            //    button.SetActive(true);
+            //}
 
-
-        if (dialogueText.text == dialogue[index])
-        {
+            dialoguePanel.SetActive(true);
+            StartCoroutine(Typing());
             button.SetActive(true);
         }
+
+
+        //if (dialogueText.text == dialogue[index])
+        //{
+        //    button.SetActive(true);
+        //}
     }
 
     public void zeroText()
@@ -121,16 +138,44 @@ public class NPC : MonoBehaviour
     {
         button.SetActive(false);
 
-        if (index < dialogue.Length - 1)
+        Debug.Log(index);
+
+        //Debug.Log(dialogue[index + 1] != null);
+
+        int count = 0;
+
+        foreach (string s in dialogue)
         {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
+            count++;
+
+            Debug.Log(s);
         }
-        else
-        {
-            zeroText();
-        }
+
+        //Debug.Log(count);
+
+        //if (index < dialogue.Length - 1)
+        //{
+        //    index++;
+        //    dialogueText.text = "";
+        //    StartCoroutine(Typing());
+        //    button.SetActive(true);
+        //}
+        //else
+        //{
+        //    zeroText();
+        //}
+
+        //if (dialogue[index + 1] != null)
+        //{
+        //    index++;
+        //    dialogueText.text = "";
+        //    StartCoroutine(Typing());
+        //    button.SetActive(true);
+        //}
+        //else
+        //{
+        //    zeroText();
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)

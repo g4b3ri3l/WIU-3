@@ -78100,7 +78100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &684042002
 RectTransform:
   m_ObjectHideFlags: 0
@@ -82000,6 +82000,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 466461341}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: wordSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1703263668}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: craftingpanel
+      value: 
+      objectReference: {fileID: 684042001}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 749732207}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1repeatDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1firstTimeDialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1repeatDialogue.Array.data[0]
+      value: Lets get to smithin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1repeatDialogue.Array.data[1]
+      value: Lets get to smithin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1firstTimeDialogue.Array.data[0]
+      value: Hi
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1firstTimeDialogue.Array.data[1]
+      value: Im Swordsvish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -84878,7 +84922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1678791015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84902,6 +84946,7 @@ MonoBehaviour:
   L3firstTimeDialogue: []
   L3repeatDialogue: []
   hasSpokenBefore: 0
+  dialogue: []
   wordSpeed: 0.06
   playerIsClose: 0
   button: {fileID: 466461341}
