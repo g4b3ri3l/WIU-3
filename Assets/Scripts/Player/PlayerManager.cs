@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     [SerializeField] int dmg_up;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip damageClip;
+    [SerializeField] private float damageSoundCooldown = 0.5f;
+    private float damageSoundCooldownTimer = 0f;
 
     private void Start()
     {
@@ -62,6 +64,12 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
             health = 0f;
             Die();
         }
+
+        // Update the cooldown timer
+        if (damageSoundCooldownTimer > 0)
+        {
+            damageSoundCooldownTimer -= Time.deltaTime;
+        }
     }
 
     public void LoadData(GameData data)
@@ -97,7 +105,11 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     public void TakeDamage(float dmg)
     {
         health -= dmg;
-        audioSource.PlayOneShot(damageClip);
+        if (damageSoundCooldownTimer <= 0f)
+        {
+            audioSource.PlayOneShot(damageClip);
+            damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
+        }
     }
 
     public void Die()
