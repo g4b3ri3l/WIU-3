@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -107.5, y: -53.8, z: 0}
-  m_LocalScale: {x: 9.46, y: 9.46, z: 9.46}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: -9.46, y: 9.46, z: 9.46}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7271185966908139924}
   m_Father: {fileID: 0}
@@ -195,14 +195,26 @@ MonoBehaviour:
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   interaction: {fileID: 0}
-  L1firstTimeDialogue: []
-  L1repeatDialogue: []
-  L2firstTimeDialogue: []
-  L2repeatDialogue: []
+  L1firstTimeDialogue:
+  - "Ay, da name\u2019s Swordsvish, a Smithy."
+  - ive me scrap ya find out there, and imma make you the best items I can.
+  L1repeatDialogue:
+  - "Let\u2019s get to smithin\u2019."
+  L2firstTimeDialogue:
+  - "My, the last time I stepped my fins here I was trainin\u2019 with ma Master."
+  - "These Heated Stones ain\u2019t no joke. Watch ya step, Junior."
+  - "If ya eva feel tired from swimmin\u2019, use them water currents to give yaself
+    a lift."
+  - Also, if ya find some old oil spills, collect some and bring em to me. Will be
+    able to fashion some old explosives for ya.
+  L2repeatDialogue:
+  - "Let\u2019s get to smithin\u2019."
   L3firstTimeDialogue: []
   L3repeatDialogue: []
   hasSpokenBefore: 0
-  wordSpeed: 0
+  audioSource: {fileID: 0}
+  SpeakClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
+  wordSpeed: 0.1
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!1 &6627562954527427871

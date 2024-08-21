@@ -172,10 +172,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  dialogue:
-  - Hello!
-  - This is a test!
-  wordSpeed: 0.06
+  interaction: {fileID: 0}
+  L1firstTimeDialogue:
+  - Oh, hello there! My names Octo, pleasure to meet you.
+  - I am here to search out clues relating to a certain individual.
+  - You might have heard of him before, Baby Shark. He disappeared a long time ago,
+    without a trace.
+  - Im trying to find him. Maybe we will see each other again! If we do, I will be
+    sure to fill you in on what I have found.
+  L1repeatDialogue: []
+  L2firstTimeDialogue: []
+  L2repeatDialogue: []
+  L3firstTimeDialogue: []
+  L3repeatDialogue: []
+  hasSpokenBefore: 0
+  audioSource: {fileID: 0}
+  SpeakClip: {fileID: 0}
+  wordSpeed: 0.1
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!95 &2826149441814132961
