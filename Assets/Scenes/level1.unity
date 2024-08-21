@@ -76548,8 +76548,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Save your progress?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 373d897397a13724d8f70105e71a573e, type: 2}
-  m_sharedMaterial: {fileID: 3409280306282829930, guid: 373d897397a13724d8f70105e71a573e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -78769,8 +78769,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nah
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3eda02af68a60c143bdc9c1b243db856, type: 2}
-  m_sharedMaterial: {fileID: -6486555319784400300, guid: 3eda02af68a60c143bdc9c1b243db856, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -81092,8 +81092,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Save
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3eda02af68a60c143bdc9c1b243db856, type: 2}
-  m_sharedMaterial: {fileID: -6486555319784400300, guid: 3eda02af68a60c143bdc9c1b243db856, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -82130,7 +82130,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1711769200}
         m_TargetAssemblyTypeName: DeathUI, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 5
@@ -87085,7 +87085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1711769199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -89315,7 +89315,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1711769200}
         m_TargetAssemblyTypeName: DeathUI, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
@@ -89417,6 +89417,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 466461343}
+    - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: interaction
+      value: 
+      objectReference: {fileID: 327153636}
     - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
       propertyPath: dialogueText
       value: 
