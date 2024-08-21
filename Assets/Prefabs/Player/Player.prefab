@@ -69,7 +69,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4506392825851641888}
@@ -215,7 +215,6 @@ MonoBehaviour:
   dashPower: 3
   dashTime: 0.2
   dashCooldown: 1
-  stamina: 100
   stamDrain: 0.5
   stamRecov: 1
 --- !u!114 &4826096100100632935
@@ -335,6 +334,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   damageClip: {fileID: 8300000, guid: b53703e54ab27994f898d6cc0c66a2ea, type: 3}
   damageSoundCooldown: 0.5
+  pollutionAmount: 0
 --- !u!81 &3433851484409755158
 AudioListener:
   m_ObjectHideFlags: 0
