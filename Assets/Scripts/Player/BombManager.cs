@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BombManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class BombManager : MonoBehaviour
     [SerializeField] GameObject bomb, purificationBomb;
     [SerializeField] Transform firePoint;
     [SerializeField] float speed;
-
+   
     [SerializeField] Item bomb1,bomb2;
     [SerializeField] float inputBuffer;
     float bufferTimer = 0;
@@ -51,6 +52,7 @@ public class BombManager : MonoBehaviour
                 GameObject bulletGO = Instantiate(bomb, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
+                bulletGO.GetComponent<bombScript>().audioSource = audioSource;
             }
         }
         if (Input.GetKeyDown(KeyCode.T) && bomb2.itemCount > 0)
@@ -74,6 +76,7 @@ public class BombManager : MonoBehaviour
                 GameObject bulletGO = Instantiate(purificationBomb, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
+                bulletGO.GetComponent<bombScript>().audioSource = audioSource;
             }
         }
     }
