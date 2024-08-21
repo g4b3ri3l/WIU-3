@@ -19,7 +19,7 @@ public class Equipment : Item
             EquipmentManager.instance.Add(this);
             used = true;
         }
-        else
+        else if (used)
         {
             RemoveFromEquipment();
             used = false;

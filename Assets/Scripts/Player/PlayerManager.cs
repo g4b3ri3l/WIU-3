@@ -119,14 +119,18 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
 
     public void TakeDamage(float dmg)
     {
-        if (shield > 0 && shieldActive) shield -= dmg;
-        else health -= dmg;
-        if (shield <= 0)
+        if (shield > 0 && shieldActive)
         {
-            shield = 0;
-            shieldActive = false;
-            armor.itemCount--;
+            shield -= dmg;
+            if (shield <= 0)
+            {
+                shield = 0;
+                shieldActive = false;
+                armor.itemCount--;
+            }
         }
+        else health -= dmg;
+
 
         if (damageSoundCooldownTimer <= 0f)
         {
