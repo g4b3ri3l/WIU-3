@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 4920952456179273444}
   - component: {fileID: 3128509023991433373}
   - component: {fileID: 5188278120093671747}
+  - component: {fileID: 3529317670555723603}
   m_Layer: 6
   m_Name: SawFish
   m_TagString: Enemy
@@ -492,6 +493,33 @@ MonoBehaviour:
   idleTimer: 0
   testStats: {fileID: 11400000, guid: 60ede9af6f562354589b3ed6c0293d27, type: 2}
   enemy: {fileID: 3128509023991433373}
+--- !u!50 &3529317670555723603
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157924783949632468}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7226193982565490755
 GameObject:
   m_ObjectHideFlags: 0
