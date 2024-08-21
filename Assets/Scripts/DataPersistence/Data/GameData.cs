@@ -1,3 +1,4 @@
+using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,17 +25,9 @@ public class GameData
             this.hp_up = 0;
         this.stam_up = 0;
         this.dmg_up = 0;
-        //this.playerPos = new Vector3(-106.5f, -60.1f, 0f);
-        if (SceneManager.GetActiveScene().name == "level1 1")
-        {
+        this.playerPos = Vector3.zero;
+        
 
-            this.playerPos = new Vector3(28.6f, -8.9f, 0f);
-        }
-        if (SceneManager.GetActiveScene().name == "level2 2")
-        {
-            this.playerPos = new Vector3(-110.4f, -58.2f, 0f);
-
-        }
         this.items = new List<Item>();
         this.equipment = new List<Equipment>();
     }
