@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioSourcceManager : MonoBehaviour
 {
+    [SerializeField] AudioMixerGroup audiomix;  // Reference to the AudioSource component
     [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
     [SerializeField] AudioClip BGM;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource.outputAudioMixerGroup = audiomix;
         audioSource.clip = BGM;
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+
 }
