@@ -29,6 +29,9 @@ public class NPC : MonoBehaviour
 
     [SerializeField] bool hasSpokenBefore;
 
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip SpeakClip;
+
     private string[] dialogue;
 
 
@@ -53,7 +56,7 @@ public class NPC : MonoBehaviour
 
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if(!hasSpokenBefore)
+            if (!hasSpokenBefore)
             {
                 dialogue = L1firstTimeDialogue;
             }
@@ -115,8 +118,10 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach(char letter in dialogue[index].ToCharArray())
+        //SpeakAudio();
+        foreach (char letter in dialogue[index].ToCharArray())
         {
+            SpeakAudio();
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
@@ -125,7 +130,7 @@ public class NPC : MonoBehaviour
     public void NextLine()
     {
         button.gameObject.SetActive(false);
-
+        //SpeakAudio();
         if (playerIsClose){
             if (index < dialogue.Length - 1)
             {
@@ -160,4 +165,9 @@ public class NPC : MonoBehaviour
             zeroText();
         }
     }
+    private void SpeakAudio()
+    {
+        audioSource.PlayOneShot(SpeakClip);
+    }
+   
 }
