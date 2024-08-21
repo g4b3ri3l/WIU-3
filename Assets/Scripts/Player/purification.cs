@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class purification : MonoBehaviour
 {
+    [SerializeField] public AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip BoomClip;
     [SerializeField] GameObject explosion;
     [SerializeField] float radius = 5;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +27,7 @@ public class purification : MonoBehaviour
                                                 Quaternion.identity).gameObject;
             Destroy(effect, 1.0f);
             Destroy(gameObject);
+            audioSource.PlayOneShot(BoomClip);
 
         }
     }
