@@ -110,7 +110,6 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
-        interaction.SetActive(true);
     }
 
     IEnumerator Typing()
@@ -139,6 +138,8 @@ public class NPC : MonoBehaviour
                 {
                     hasSpokenBefore = true;
                 }
+                interaction.SetActive(true);
+
                 zeroText();
             }
         }
