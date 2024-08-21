@@ -185,6 +185,11 @@ MonoBehaviour:
   - Be sure to carry your Water Purifier with you and watch its gauge.
   - Let it drain and the pollution will start affecting you. But have no fear, I
     can heal you right back up.
+  - Watch your step here, the soil gives way and forms Quicksand. It gets everywhere
+    when you step in it.
+  - Makes you feel sluggish, even after you come out of it.
+  - If you ever find water currents pulling you down, odds are there is one of these
+    piles waiting for you at the bottom.
   L2repeatDialogue:
   - 'Let''s get you patched up. '
   L3firstTimeDialogue: []
@@ -193,7 +198,7 @@ MonoBehaviour:
   hasSpokenBefore: 0
   audioSource: {fileID: 0}
   SpeakClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
-  wordSpeed: 0.1
+  wordSpeed: 0.01
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!95 &5264444210891523788
