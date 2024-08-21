@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class DataPersistanceManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class DataPersistanceManager : MonoBehaviour
             Debug.LogError("Found more than one Data Persistance Manager in the Scene");
         }
         instance = this;
+
+        
     }
 
     private void Start()
@@ -36,7 +39,7 @@ public class DataPersistanceManager : MonoBehaviour
     {
         this.gameData = new GameData();
     }
-
+    
     public void LoadGame()
     {
         this.gameData = dataHandler.Load();
@@ -46,11 +49,24 @@ public class DataPersistanceManager : MonoBehaviour
             Debug.Log("No data was found. Initialising data to defaults");
             NewGame();
         }
+        string sceneName = SceneManager.GetActiveScene().name;
 
-        foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects)
+        if (sceneName == "level1 1")
+        {
+            gameData.playerPos = new Vector3(-103.2f, -56.6f, 0f);
+        }
+        else if (sceneName == "level2 2")
+        {
+            gameData.playerPos = new Vector3(-110.4f, -58.2f, 0f);
+        }
+
+        foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
             dataPersistanceObj.LoadData(gameData);
         }
+
+
+
 
     }
 

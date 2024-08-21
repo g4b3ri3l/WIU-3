@@ -12,6 +12,7 @@ public class sceneSwitching : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Task 2c - Load the scene using SceneManager.LoadScene()
+            DataPersistanceManager.instance.SaveGame();
             SceneManager.LoadScene(Nextlevel);
             DataPersistanceManager.instance.LoadGame();
         }
