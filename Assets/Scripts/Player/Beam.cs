@@ -35,7 +35,15 @@ public class Beam : MonoBehaviour
         {
             enemy = collision.transform.GetComponent<Enemy>();
 
-            enemy.TakeDamage(20);
+            if (enemy != null)
+            {
+                Debug.Log("Enemy component found: " + enemy.name);
+                enemy.TakeDamage(10);
+            }
+            else
+            {
+                Debug.LogError("Enemy component not found on: " + collision.name);
+            }
 
             //Destroy(collision.gameObject);
             //Destroy(gameObject);
