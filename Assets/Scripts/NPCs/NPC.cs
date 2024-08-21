@@ -99,7 +99,6 @@ public class NPC : MonoBehaviour
             }
         }
 
-        Debug.Log(dialogue[index]);
         if (dialogueText.text == dialogue[index])
         {
             button.gameObject.SetActive(true);
