@@ -76,17 +76,11 @@ public class Inventory : MonoBehaviour, IDataPersistance
         //    onItemChangedCallBack.Invoke();
         //}
 
-        for (int i = 0; i < data.items.Count; i++)
-        {
-            this.items.Add((Item)data.items[i]);
-        }
-
 
 
     }
 
     public void SaveData(ref GameData data)
     {
-        data.items = this.items;
     }
 }

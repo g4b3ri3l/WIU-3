@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     [SerializeField] public float maxStamina;
     public bool alive = true;
 
+    public bool shieldActive;
+    [SerializeField] public float shield;
 
     [SerializeField] int hp_up;
     [SerializeField] int stam_up;
@@ -23,7 +25,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     private float damageSoundCooldownTimer = 0f;
 
     [SerializeField] public float pollutionAmount;
-    
+
+    [SerializeField] Equipment armor, bullet;
 
     private void Start()
     {
@@ -32,6 +35,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         stamina = 100f;
         maxStamina = 100f;
         damage = 1f;
+
+        shieldActive = false;
+        shield = 0;
 
         hp_up = 0;
         stam_up = 0;
@@ -86,6 +92,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         this.dmg_up = data.dmg_up;
         this.stam_up = data.stam_up;
 
+        this.shield = data.shield;
+        this.shieldActive = data.shieldActive;
 
 
         this.stamina = 100f + this.stam_up * 10f;
@@ -101,6 +109,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     {
         data.health = this.health;
         data.playerPos = this.transform.position;
+        data.shield = this.shield;
+        data.shieldActive = this.shieldActive;
 
         data.hp_up =this.hp_up;
         data.dmg_up = this.dmg_up;
@@ -109,7 +119,15 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
 
     public void TakeDamage(float dmg)
     {
-        health -= dmg;
+        if (shield > 0 && shieldActive) shield -= dmg;
+        else health -= dmg;
+        if (shield <= 0)
+        {
+            shield = 0;
+            shieldActive = false;
+            armor.itemCount--;
+        }
+
         if (damageSoundCooldownTimer <= 0f)
         {
             audioSource.PlayOneShot(damageClip);
@@ -126,6 +144,18 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         }
     }
 
+    public void Shield()
+    {
+        shieldActive = true;
+        if (shield <= 0)
+        {
+            shield += 40;
+        }
+    }
+    public void ShieldOff()
+    {
+        shieldActive = false;
+    }
 
 
     public void Die()

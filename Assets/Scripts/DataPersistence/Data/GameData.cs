@@ -12,8 +12,9 @@ public class GameData
     public int hp_up;
     public int stam_up;
     public int dmg_up;
+    public float shield;
+    public bool shieldActive;
     public Vector3 playerPos;
-    public List<Item> items;
     public List<Equipment> equipment;
     public GameData()
     {
@@ -35,7 +36,6 @@ public class GameData
             this.playerPos = new Vector3(-110.4f, -58.2f, 0f);
 
         }
-        this.items = new List<Item>();
         this.equipment = new List<Equipment>();
     }
 }

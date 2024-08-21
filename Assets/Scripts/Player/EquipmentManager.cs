@@ -6,20 +6,29 @@ public class EquipmentManager : MonoBehaviour, IDataPersistance
 {
     #region Singleton
     public static EquipmentManager instance;
+    private PlayerManager player;
 
     private void Awake()
     {
         instance = this;
+        player = GetComponent<PlayerManager>();
     }
 
     #endregion
 
     public List<Equipment> equipment;
-    public int space = 3;
+    public int space = 2;
 
     public delegate void OnEquipmentChanged();
     public OnEquipmentChanged onEquipmentChanged;
 
+    private void Update()
+    {
+        if (equipment != null)
+        {
+
+        }
+    }
     public bool Add(Equipment item)
     {
         if (!item.isDefaultItem)
@@ -31,7 +40,7 @@ public class EquipmentManager : MonoBehaviour, IDataPersistance
             }
 
             equipment.Add(item);
-
+            if (item.name == "Plastic Armour") player.Shield();
             if (onEquipmentChanged != null)
             {
                 onEquipmentChanged.Invoke();
@@ -43,7 +52,7 @@ public class EquipmentManager : MonoBehaviour, IDataPersistance
     public void Remove(Equipment item)
     {
         equipment.Remove(item);
-
+        if (item.name == "Plastic Armour") player.ShieldOff();
         if (onEquipmentChanged != null)
         {
             onEquipmentChanged.Invoke();
