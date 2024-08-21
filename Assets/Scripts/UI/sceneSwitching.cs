@@ -13,6 +13,7 @@ public class sceneSwitching : MonoBehaviour
         {
             // Task 2c - Load the scene using SceneManager.LoadScene()
             SceneManager.LoadScene(Nextlevel);
+            DataPersistanceManager.instance.LoadGame();
         }
     }
 }
