@@ -256,7 +256,7 @@ MonoBehaviour:
   speed: 10
   attackCooldown: 1
   inputBuffer: 0.2
-  offset: 0
+  offset: 1.5
   audioSource: {fileID: 0}
   shootingClip: {fileID: 8300000, guid: 45bbd8a16a0f3ae45b35ee238e506f65, type: 3}
 --- !u!114 &2281639878176206756
