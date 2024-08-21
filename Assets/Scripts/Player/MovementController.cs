@@ -18,7 +18,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] float dashTime = 0.2f;
     [SerializeField] float dashCooldown = 1f;
 
-    [SerializeField] float stamina = 100f;
+    private PlayerManager playerManager;
+
     [SerializeField] float stamDrain = 0.5f;
     [SerializeField] float stamRecov = 1f;
 
@@ -28,6 +29,7 @@ public class MovementController : MonoBehaviour
     {
         _rigid = GetComponent<Rigidbody2D>();
         localScaleX = transform.localScale.x;
+        playerManager = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class MovementController : MonoBehaviour
         hori = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && playerManager.stamina > 10)
         {
             StartCoroutine(Dash());
         }
@@ -58,16 +60,22 @@ public class MovementController : MonoBehaviour
 
         if (vert > 0)
         {
-            stamina -= stamDrain;
+            playerManager.stamina -= stamDrain;
         }
         else
         {
-            stamina += stamRecov;
+            playerManager.stamina += stamRecov;
 
-            if (stamina >= 100f)
+            if (playerManager.stamina >= playerManager.maxStamina)
             {
-                stamina = 100f;
+                playerManager.stamina = playerManager.maxStamina;
             }
+        }
+
+        if (playerManager.stamina <= 0)
+        {
+            playerManager.stamina = 0;
+            vert = 0;
         }
 
         _rigid.velocity = new Vector2(hori * speed, vert * speed);
@@ -92,6 +100,7 @@ public class MovementController : MonoBehaviour
         canDash = false;
         isDashing = true;
         float oggrav = _rigid.gravityScale;
+        playerManager.stamina -= 10;
         _rigid.gravityScale = 0.0f;
         _rigid.velocity = new Vector2(_rigid.velocity.x * dashPower, 0f);
         yield return new WaitForSeconds(dashTime);

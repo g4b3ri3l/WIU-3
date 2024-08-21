@@ -21,8 +21,9 @@ public class Pollution : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 PlayerManager player = collision.gameObject.GetComponent<PlayerManager>();
-                player.TakeDamage(0.1f);
-                
+
+                if (player.pollutionAmount >= 50) player.TakeDamage(0.1f);
+                else player.pollutionAmount += Time.deltaTime * 7f;
             }
         }
     }

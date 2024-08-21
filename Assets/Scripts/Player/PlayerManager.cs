@@ -22,6 +22,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     [SerializeField] private float damageSoundCooldown = 0.5f;
     private float damageSoundCooldownTimer = 0f;
 
+    [SerializeField] public float pollutionAmount;
+    
+
     private void Start()
     {
         health = 100f;
@@ -64,6 +67,8 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
             health = 0f;
             Die();
         }
+        if (pollutionAmount >0f)
+        pollutionAmount -= Time.deltaTime * 2f;
 
         // Update the cooldown timer
         if (damageSoundCooldownTimer > 0)
