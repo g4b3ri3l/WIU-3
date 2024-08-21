@@ -197,7 +197,7 @@ MonoBehaviour:
   interaction: {fileID: 0}
   L1firstTimeDialogue:
   - "Ay, da name\u2019s Swordsvish, a Smithy."
-  - ive me scrap ya find out there, and imma make you the best items I can.
+  - Give me scrap ya find out there, and imma make you the best items I can.
   L1repeatDialogue:
   - "Let\u2019s get to smithin\u2019."
   L2firstTimeDialogue:
@@ -209,12 +209,14 @@ MonoBehaviour:
     able to fashion some old explosives for ya.
   L2repeatDialogue:
   - "Let\u2019s get to smithin\u2019."
-  L3firstTimeDialogue: []
-  L3repeatDialogue: []
+  L3firstTimeDialogue:
+  - "Let\u2019s get to smithin\u2019."
+  L3repeatDialogue:
+  - "Let\u2019s get to smithin\u2019."
   hasSpokenBefore: 0
   audioSource: {fileID: 0}
   SpeakClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
-  wordSpeed: 0.1
+  wordSpeed: 0.01
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!1 &6627562954527427871

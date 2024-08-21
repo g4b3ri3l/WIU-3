@@ -143,7 +143,10 @@ public class NPC : MonoBehaviour
                 {
                     hasSpokenBefore = true;
                 }
-                interaction.SetActive(true);
+                if (interaction != null)
+                {
+                    interaction.SetActive(true);
+                }
 
                 zeroText();
             }

@@ -180,15 +180,46 @@ MonoBehaviour:
     without a trace.
   - Im trying to find him. Maybe we will see each other again! If we do, I will be
     sure to fill you in on what I have found.
-  L1repeatDialogue: []
-  L2firstTimeDialogue: []
-  L2repeatDialogue: []
-  L3firstTimeDialogue: []
-  L3repeatDialogue: []
+  L1repeatDialogue:
+  - My my, I found some interesting clues about Baby Shark.
+  - Before he went missing, he used to be an Icon among Sea Life.
+  - He was as popular as one can be. But over the course of a couple years, his public
+    appearances slowly dropped, until he disappeared.
+  - 'Thats all I have for now. Hope to see you soon! '
+  L2firstTimeDialogue:
+  - Well would you look at that, at this point I might consider us best friends with
+    the number of times im seeing ya.
+  - Well, I managed to find out more about Baby Shark! Turns out, he wasnt the only
+    one that slowly disappeared.
+  - His family followed the same trend! They all slowly faded out of existence, but
+    why?
+  - Ohoho I can feel we are about to hit something very interesting!
+  L2repeatDialogue:
+  - Well would you look at that, at this point I might consider us best friends with
+    the number of times im seeing ya.
+  - Well, I managed to find out more about Baby Shark! Turns out, he wasnt the only
+    one that slowly disappeared.
+  - His family followed the same trend! They all slowly faded out of existence, but
+    why?
+  - Ohoho I can feel we are about to hit something very interesting!
+  L3firstTimeDialogue:
+  - Hey, fancy seeing you here. This place, seen better days huh.
+  - Unfortunately, I havent been able to discover much else about Baby Shark, apart
+    from that it is somehow correlated to Humanity dumping trash into our Oceans.
+  - Im afraid this is the end of the road for me.
+  - 'Any further and I fear I may not return from this journey. If you do find out
+    why, please come tell me? '
+  L3repeatDialogue:
+  - Hey, fancy seeing you here. This place, seen better days huh.
+  - Unfortunately, I havent been able to discover much else about Baby Shark, apart
+    from that it is somehow correlated to Humanity dumping trash into our Oceans.
+  - Im afraid this is the end of the road for me.
+  - 'Any further and I fear I may not return from this journey. If you do find out
+    why, please come tell me? '
   hasSpokenBefore: 0
   audioSource: {fileID: 0}
-  SpeakClip: {fileID: 0}
-  wordSpeed: 0.1
+  SpeakClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
+  wordSpeed: 0.01
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!95 &2826149441814132961
