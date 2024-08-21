@@ -126,19 +126,21 @@ public class NPC : MonoBehaviour
     {
         button.gameObject.SetActive(false);
 
-        if (index < dialogue.Length - 1)
-        {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-        }
-        else
-        {
-            if (dialogue == L1firstTimeDialogue || dialogue == L2firstTimeDialogue || dialogue == L3firstTimeDialogue)
+        if (playerIsClose){
+            if (index < dialogue.Length - 1)
             {
-                hasSpokenBefore = true;
+                index++;
+                dialogueText.text = "";
+                StartCoroutine(Typing());
             }
-            zeroText();
+            else
+            {
+                if (dialogue == L1firstTimeDialogue || dialogue == L2firstTimeDialogue || dialogue == L3firstTimeDialogue)
+                {
+                    hasSpokenBefore = true;
+                }
+                zeroText();
+            }
         }
     }
 
