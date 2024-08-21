@@ -10,7 +10,7 @@ public class MovementController : MonoBehaviour
     float hori;
     float vert;
     bool isfacingRight = true;
-    [SerializeField] float speed = 8f;
+    [SerializeField] public float speed = 8f;
 
     bool canDash = true;
     bool isDashing;
