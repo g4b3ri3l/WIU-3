@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameObject interaction;
 
 
-    [Header("Level1")]
+    [Header("Level1 1")]
     [SerializeField] string[] L1firstTimeDialogue;
     [SerializeField] string[] L1repeatDialogue;
                               
@@ -99,7 +99,7 @@ public class NPC : MonoBehaviour
             }
         }
 
-
+        Debug.Log(dialogue[index]);
         if (dialogueText.text == dialogue[index])
         {
             button.gameObject.SetActive(true);

@@ -76408,7 +76408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 327153636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1609b5754f41f40bccffcc86a05ab2, type: 3}
+  m_Script: {fileID: 11500000, guid: b51a06a9d8c47ed43bcf5912840988c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   craftPanel: {fileID: 2046107107}
@@ -83707,6 +83707,8 @@ MonoBehaviour:
   inventoryPanels: {fileID: 316188383}
   pause: {fileID: 116987730}
   saveUI: {fileID: 1822798106}
+  deathUI: {fileID: 1711769198}
+  playerManager: {fileID: 1870672586}
 --- !u!1001 &1353426708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87118,7 +87120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711769198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7937f9285d928242b907f97efa1e5ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 424a25b3f088cd443a040e28f664e7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1729765748
@@ -89417,6 +89419,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 466461343}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: interaction
+      value: 
+      objectReference: {fileID: 327153636}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1703263668}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 749732207}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1repeatDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L2repeatDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1firstTimeDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1repeatDialogue.Array.data[0]
+      value: o
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L2firstTimeDialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L2repeatDialogue.Array.data[0]
+      value: h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L1firstTimeDialogue.Array.data[0]
+      value: boz
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428228216322250, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
+      propertyPath: L2firstTimeDialogue.Array.data[0]
+      value: thth
+      objectReference: {fileID: 0}
     - target: {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
       propertyPath: button
       value: 
@@ -89457,7 +89507,8 @@ PrefabInstance:
       propertyPath: L1firstTimeDialogue.Array.data[1]
       value: lol
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7026309031815751357, guid: 0fb9d5bcfc81dc245b364d62b67323fc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2524204637924336171}
   - component: {fileID: 797310620690047992}
   - component: {fileID: 2075991531209314308}
-  - component: {fileID: 7026309031815751357}
   - component: {fileID: 4253978579225722721}
+  - component: {fileID: 3074428228216322250}
   m_Layer: 0
   m_Name: Swordsvish
   m_TagString: Untagged
@@ -159,26 +159,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.51
---- !u!114 &7026309031815751357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2256973751215398113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a62f419cd1a5484fae10e21f36eac9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  dialogue:
-  - Hello!
-  - This is a test!
-  wordSpeed: 0.06
-  playerIsClose: 0
-  button: {fileID: 0}
 --- !u!95 &4253978579225722721
 Animator:
   serializedVersion: 5
@@ -200,6 +180,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3074428228216322250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256973751215398113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a62f419cd1a5484fae10e21f36eac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  interaction: {fileID: 0}
+  L1firstTimeDialogue: []
+  L1repeatDialogue: []
+  L2firstTimeDialogue: []
+  L2repeatDialogue: []
+  L3firstTimeDialogue: []
+  L3repeatDialogue: []
+  hasSpokenBefore: 0
+  wordSpeed: 0
+  playerIsClose: 0
+  button: {fileID: 0}
 --- !u!1 &6627562954527427871
 GameObject:
   m_ObjectHideFlags: 0
