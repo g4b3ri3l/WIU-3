@@ -51,6 +51,15 @@ public class SwordFish : Enemy
         Debug.Log($"{swordFishStats.enemyName} has died!");
         Destroy(gameObject);  // Default death behavior
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerManager player = collision.GetComponent<PlayerManager>();
+            player.TakeDamage(damage);
+        }
+    }
 }
 
    
