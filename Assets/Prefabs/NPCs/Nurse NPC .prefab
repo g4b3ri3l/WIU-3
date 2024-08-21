@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -107.5, y: -53.8, z: 0}
-  m_LocalScale: {x: 9.46, y: 9.46, z: 9.46}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: -9.46, y: 9.46, z: 9.46}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,10 +172,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  dialogue:
-  - Hello!
-  - This is a test!
-  wordSpeed: 0.06
+  interaction: {fileID: 0}
+  L1firstTimeDialogue:
+  - Greetings, I am a Wandering Nurse Shark known as Sturgeon.
+  - After seeing the Cult forming, I believed that Sea Life in other parts of the
+    Ocean needed my help.
+  - Allow me to provide to you my services.
+  L1repeatDialogue:
+  - Let's get you patched up.
+  L2firstTimeDialogue:
+  - Oh deary me, look at all this pollution out here.
+  - Be sure to carry your Water Purifier with you and watch its gauge.
+  - Let it drain and the pollution will start affecting you. But have no fear, I
+    can heal you right back up.
+  L2repeatDialogue:
+  - 'Let''s get you patched up. '
+  L3firstTimeDialogue: []
+  L3repeatDialogue:
+  - Let's get you patched up.
+  hasSpokenBefore: 0
+  audioSource: {fileID: 0}
+  SpeakClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
+  wordSpeed: 0.1
   playerIsClose: 0
   button: {fileID: 0}
 --- !u!95 &5264444210891523788
