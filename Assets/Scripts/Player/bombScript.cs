@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bombScript : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] public AudioSource audioSource;  // Reference to the AudioSource component
     [SerializeField] AudioClip BoomClip;
     [SerializeField] GameObject explosion;
     [SerializeField] float radius = 5;
+
+
+    private void Start()
+    {
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Enemy") || collision.CompareTag("Ground"))
         {
-            audioSource.PlayOneShot(BoomClip);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
             foreach (var collider in colliders)
             {
@@ -44,6 +49,7 @@ public class bombScript : MonoBehaviour
             Destroy(effect, 1.0f);
             Destroy(gameObject);
 
+            audioSource.PlayOneShot(BoomClip);
         }
     }
 }
