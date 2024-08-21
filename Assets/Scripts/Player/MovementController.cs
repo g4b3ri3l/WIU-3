@@ -25,6 +25,9 @@ public class MovementController : MonoBehaviour
 
     float localScaleX;
 
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip DashClip;
+
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
@@ -46,6 +49,7 @@ public class MovementController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && playerManager.stamina > 10)
         {
             StartCoroutine(Dash());
+            audioSource.PlayOneShot(DashClip);
         }
 
         Flip();
