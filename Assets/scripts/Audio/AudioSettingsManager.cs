@@ -26,7 +26,7 @@ public class AudioSettingsManager : MonoBehaviour
     {
         // -40 is the minimum volume that can be heard
         // The following is to calculate the volume to be in the range of -40 to 0 based on the slider value
-        float volume = (masterVolumeSlider.value*100 / 20 - 100);
+        float volume = (masterVolumeSlider.value*80 / 20 - 80);
         // Set the mixer master volume to the slider value
         mixer.SetFloat(masterVolumeName, volume);
     }
