@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  timeline: {fileID: 0}
+  spawner: {fileID: 0}
 --- !u!114 &4300945719003539155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13edbf451e95dbf47b5682a78aab9a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 100
+  bulletsAmount: 20
   startAngle: 0
   endAngle: 360
+  boss: {fileID: 0}
+  fireDelay: 20
