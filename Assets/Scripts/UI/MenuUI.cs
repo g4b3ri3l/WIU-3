@@ -20,13 +20,12 @@ public class MenuUI : MonoBehaviour
 
     public void newStart()
     {
-        //loadingPanel.transform.position = new Vector3 (loadingPanel.transform.position.x, loadingPanel.transform.position.y + 1000, 0);
+        SceneManager.LoadScene(continueScene);
     }
 
     void ContinueStart()
     {
-        SceneManager.LoadScene(continueScene);
-        //NEED MORE STUFF
+        
     }
 
     void Settings()

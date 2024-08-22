@@ -51,37 +51,49 @@ public class DataPersistanceManager : MonoBehaviour
         }
         string sceneName = SceneManager.GetActiveScene().name;
 
+
+
         if (sceneName == "level1 1")
         {
+            if (!gameData.level1)
             gameData.playerPos = new Vector3(-122.66f, -54.59f, 0f);
+            
         }
         else if (sceneName == "level2 2")
         {
-            gameData.playerPos = new Vector3(-110.4f, -58.2f, 0f);
+            if (!gameData.level2)
+                gameData.playerPos = new Vector3(-110.4f, -58.2f, 0f);
         }
-
         else if (sceneName == "level3 3")
         {
-            gameData.playerPos = new Vector3(22.32f, -84.33f, 0f);
+            if (!gameData.level3)
+                gameData.playerPos = new Vector3(22.32f, -84.33f, 0f);
         }
 
         foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
             dataPersistanceObj.LoadData(gameData);
         }
+    }
 
-
-
-
+    public void ContinueScene()
+    {
+        SceneManager.LoadScene(this.gameData.levelname);
+        LoadGame();
     }
 
     public void SaveGame()
     {
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        gameData.levelname = sceneName;
+
+        
+
         foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
             dataPersistanceObj.SaveData(ref gameData);
         }
-
 
         dataHandler.Save(gameData);
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour, IDataPersistance
 {
@@ -111,6 +112,11 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         data.playerPos = this.transform.position;
         data.shield = this.shield;
         data.shieldActive = this.shieldActive;
+
+        if (SceneManager.GetActiveScene().name == "level1 1") data.level1 = true;
+        if (SceneManager.GetActiveScene().name == "level2 2") data.level2 = true;
+        if (SceneManager.GetActiveScene().name == "level3 3") data.level3 = true;
+
 
         data.hp_up =this.hp_up;
         data.dmg_up = this.dmg_up;

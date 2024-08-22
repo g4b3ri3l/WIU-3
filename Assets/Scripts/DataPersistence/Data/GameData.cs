@@ -16,6 +16,8 @@ public class GameData
     public bool shieldActive;
     public Vector3 playerPos;
     public List<Equipment> equipment;
+    public string levelname;
+    public bool level1, level2, level3; 
     public GameData()
     {
 
@@ -27,8 +29,8 @@ public class GameData
         this.dmg_up = 0;
         this.shield = 0;
         this.shieldActive = false;
-
-
+        level1 = level2 = level3 = false;
+        this.levelname = null;
         this.playerPos = Vector3.zero;
         this.equipment = new List<Equipment>();
     }

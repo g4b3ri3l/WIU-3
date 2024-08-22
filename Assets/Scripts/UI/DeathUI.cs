@@ -11,12 +11,4 @@ public class DeathUI : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-
-    public void Continue(string stuff)
-    {
-        SceneManager.LoadScene(stuff);
-
-    }
-
-
 }
