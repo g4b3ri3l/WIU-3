@@ -1273,6 +1273,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: data.game
   useEncryption: 1
+  gameData:
+    health: 100
+    stamina: 100
+    damage: 100
+    hp_up: 0
+    stam_up: 0
+    dmg_up: 0
+    shield: 0
+    shieldActive: 0
+    playerPos: {x: 0, y: 0, z: 0}
+    equipment: []
+    levelname: 
+    level1: 0
+    level2: 0
+    level3: 0
+    plasticBag: 0
+    plasticStraw: 0
+    metalScrap: 0
+    fishScrap: 0
+    sharkFin: 0
+    fishSoup: 0
+    sharkSoup: 0
+    plasticArmour: 0
+    enhancedBullets: 0
+    bucket: 0
+    oilBucket: 0
+    bomb: 0
+    purify: 0
+  plasticBag: {fileID: 0}
+  plasticStraw: {fileID: 0}
+  metalScrap: {fileID: 0}
+  fishScrap: {fileID: 0}
+  sharkFin: {fileID: 0}
+  fishSoup: {fileID: 0}
+  sharkSoup: {fileID: 0}
+  plasticArmour: {fileID: 0}
+  enhancedBullets: {fileID: 0}
+  bucket: {fileID: 0}
+  oilBucket: {fileID: 0}
+  bomb: {fileID: 0}
+  purify: {fileID: 0}
 --- !u!4 &556564143
 Transform:
   m_ObjectHideFlags: 0
