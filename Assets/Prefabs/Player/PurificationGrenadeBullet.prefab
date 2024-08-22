@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  BoomClip: {fileID: 8300000, guid: 91c2dddc8ecaacc4aba4605ed8df232d, type: 3}
+  BoomClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
   explosion: {fileID: 8936927830991120578, guid: c66a33eb258bf12499780153a7c24c76, type: 3}
   radius: 5
