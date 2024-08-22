@@ -7,9 +7,6 @@ public class SeaHorse : Enemy
 {
     [SerializeField] private EnemyStats Stats;  // Reference to ScriptableObject with common enemy data
 
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
-    [SerializeField] AudioClip StabClip;
-
     private string Name;
     public float health, damage;
 
@@ -64,7 +61,6 @@ public class SeaHorse : Enemy
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            audioSource.PlayOneShot(StabClip);
             PlayerManager player = collision.GetComponent<PlayerManager>();
             player.TakeDamage(damage);
         }

@@ -11,9 +11,7 @@ public class FireBullets : MonoBehaviour
     private Vector2 moveDirection;
 
     [SerializeField] private EnemySpawner boss;
-
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
-    [SerializeField] AudioClip shootingClip;
+    [SerializeField] private float fireDelay = 10f;
 
     private void Start()
     {
@@ -23,14 +21,18 @@ public class FireBullets : MonoBehaviour
     private void Update()
     {
         if (boss.phase == 2)
-            InvokeRepeating("Fire", 0f, 2f);
+        {
+            InvokeRepeating("Fire", 0f, fireDelay);
+            boss.phase = 3;
+        }
+           
     }
 
     private void Fire()
     {
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
-        audioSource.PlayOneShot(shootingClip);
+
         for (int i = 0; i < bulletsAmount + 1; i++)
         {
             float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
