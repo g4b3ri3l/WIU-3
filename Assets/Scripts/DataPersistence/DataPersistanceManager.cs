@@ -38,6 +38,13 @@ public class DataPersistanceManager : MonoBehaviour
     public void NewGame()
     {
         this.gameData = new GameData();
+
+        foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
+        {
+            dataPersistanceObj.SaveData(ref gameData);
+        }
+
+        dataHandler.Save(gameData);
     }
     
     public void LoadGame()

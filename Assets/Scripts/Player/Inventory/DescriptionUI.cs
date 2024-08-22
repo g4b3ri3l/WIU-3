@@ -18,7 +18,7 @@ public class DescriptionUI : MonoBehaviour
 
     public Item item;
     [SerializeField] public TextMeshProUGUI description;
-    [SerializeField] public TextMeshProUGUI name;
+    [SerializeField] public new TextMeshProUGUI name;
     [SerializeField] public Image icon;
 
     public void UpdateUI()
