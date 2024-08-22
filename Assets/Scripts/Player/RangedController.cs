@@ -68,9 +68,7 @@ public class RangedController : MonoBehaviour
                 GameObject bulletGO = Instantiate(bullet, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
-                if (bullet == enhancedBullet) { 
-                    enhancedBulletStore.itemCount--;
-                }
+                if (bullet == enhancedBullet) { enhancedBulletStore.itemCount--;}
             }
             attacking = false;
         }
