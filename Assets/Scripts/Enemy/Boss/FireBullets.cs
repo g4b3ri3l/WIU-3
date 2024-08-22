@@ -12,6 +12,9 @@ public class FireBullets : MonoBehaviour
 
     [SerializeField] private EnemySpawner boss;
 
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip shootingClip;
+
     private void Start()
     {
         
@@ -27,7 +30,7 @@ public class FireBullets : MonoBehaviour
     {
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
-
+        audioSource.PlayOneShot(shootingClip);
         for (int i = 0; i < bulletsAmount + 1; i++)
         {
             float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
