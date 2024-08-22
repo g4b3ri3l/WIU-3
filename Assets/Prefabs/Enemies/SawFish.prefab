@@ -467,12 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 60ede9af6f562354589b3ed6c0293d27, type: 2}
-  itemdrops:
-  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
-  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
-  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
-  - {fileID: 7640534942428346430, guid: 78e794a1120e58e4b987e26ac09de5ce, type: 3}
-  - {fileID: 7640534942428346430, guid: 78e794a1120e58e4b987e26ac09de5ce, type: 3}
+  itemdrops: []
   player: {fileID: 0}
   health: 0
   damage: 0
