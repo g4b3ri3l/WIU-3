@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 7432393648714187971}
   - component: {fileID: 4826096100100632935}
   - component: {fileID: 2328926219304391016}
-  - component: {fileID: 2281639878176206756}
   - component: {fileID: 1110180993318556717}
   - component: {fileID: 7214384878991033773}
   - component: {fileID: 4237169684586137745}
@@ -217,6 +216,8 @@ MonoBehaviour:
   dashCooldown: 1
   stamDrain: 0.5
   stamRecov: 1
+  audioSource: {fileID: 0}
+  DashClip: {fileID: 8300000, guid: c7c79a8987c719f43bf9abbcd40ba93f, type: 3}
 --- !u!114 &4826096100100632935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590b7b04ad586234e923e2ac8277977f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6479053001677440978, guid: f0390daf3b870994bbb466b19e4a6271, type: 3}
+  normalBullet: {fileID: 6479053001677440978, guid: f0390daf3b870994bbb466b19e4a6271, type: 3}
+  enhancedBullet: {fileID: 6479053001677440978, guid: d215fcb598ae4304da03b5e0a76758b3, type: 3}
+  enhancedBulletStore: {fileID: 11400000, guid: eff8e267a5693084086e33b4c55bb81d, type: 2}
   beam: {fileID: 4321666686007768242, guid: 255a9846d73be8a4a935be548cf43568, type: 3}
   firePoint: {fileID: 4506392825851641888}
   speed: 10
@@ -259,22 +262,6 @@ MonoBehaviour:
   offset: 1.5
   audioSource: {fileID: 0}
   shootingClip: {fileID: 8300000, guid: 45bbd8a16a0f3ae45b35ee238e506f65, type: 3}
---- !u!114 &2281639878176206756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014026991223001262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4544f0f59ec30aa45a150d825af729cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  collectingClip: {fileID: 8300000, guid: 049c3d0d6b74a15478dcf818684b2ced, type: 3}
-  items: []
-  space: 20
 --- !u!95 &1110180993318556717
 Animator:
   serializedVersion: 5
@@ -310,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipment: []
   space: 3
+  enhancedState: 0
 --- !u!114 &4237169684586137745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,13 +316,17 @@ MonoBehaviour:
   maxHp: 0
   maxStamina: 0
   alive: 1
+  shieldActive: 0
+  shield: 0
   hp_up: 0
   stam_up: 0
   dmg_up: 0
   audioSource: {fileID: 0}
-  damageClip: {fileID: 8300000, guid: b53703e54ab27994f898d6cc0c66a2ea, type: 3}
+  damageClip: {fileID: 8300000, guid: a271790288639e34099c56b592ae4874, type: 3}
   damageSoundCooldown: 0.5
   pollutionAmount: 0
+  armor: {fileID: 11400000, guid: 60619b54765dc804b97684023797d5cb, type: 2}
+  bullet: {fileID: 11400000, guid: eff8e267a5693084086e33b4c55bb81d, type: 2}
 --- !u!81 &3433851484409755158
 AudioListener:
   m_ObjectHideFlags: 0
@@ -364,4 +356,4 @@ MonoBehaviour:
   inputBuffer: 0.4
   offset: 0
   audioSource: {fileID: 0}
-  shootingClip: {fileID: 8300000, guid: b53703e54ab27994f898d6cc0c66a2ea, type: 3}
+  shootingClip: {fileID: 8300000, guid: 8b49523e71d1b264984dc4fbc6a1b440, type: 3}
