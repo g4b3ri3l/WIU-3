@@ -6,7 +6,8 @@ using UnityEngine;
 public class SawFish : Enemy
 {
     [SerializeField] private EnemyStats Stats;  // Reference to ScriptableObject with common enemy data
-
+    [SerializeField] GameObject[] itemdrops;
+    [SerializeField] Transform player;
     private string Name;
     public float health, damage;
 
@@ -54,6 +55,11 @@ public class SawFish : Enemy
     public override void Die()
     {
         Debug.Log($"{Stats.enemyName} has died!");
+        for (int i = 0; i < itemdrops.Length; i++)
+        {
+            var item = Instantiate(itemdrops[i], transform.position, Quaternion.identity);
+            item.GetComponent<Interactable>().player = player;
+        }
         Destroy(gameObject);  // Default death behavior
     }
 

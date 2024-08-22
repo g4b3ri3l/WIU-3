@@ -104,7 +104,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7331474904c074043b7ee5d01a551581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemdrops:
+  - {fileID: 1376812728697281451, guid: 544e358e01709c64ba51ae9b0d6378b0, type: 3}
+  - {fileID: 1376812728697281451, guid: 544e358e01709c64ba51ae9b0d6378b0, type: 3}
+  - {fileID: 2318735728120844913, guid: e1745267de708ec48a2831f1ac2810e6, type: 3}
   HealthBar: {fileID: 8657086258110772838}
+  player: {fileID: 0}
   swordFishStats: {fileID: 11400000, guid: 8a53a507b02d9e141be096c3575f8a08, type: 2}
 --- !u!114 &226714986655406785
 MonoBehaviour:

@@ -10,11 +10,10 @@ public class SwordFish : Enemy
     private float maxHealth;
     private float currHealth;
 
-
-
+    [SerializeField] GameObject[] itemdrops;
     [SerializeField] private EnemyHealthBar HealthBar;
     private float fixedRotation = 0;
-
+    [SerializeField] Transform player;
     [SerializeField] private EnemyStats swordFishStats;
 
     protected override void Awake()
@@ -49,6 +48,11 @@ public class SwordFish : Enemy
     public override void Die()
     {
         Debug.Log($"{swordFishStats.enemyName} has died!");
+        for (int i = 0; i < itemdrops.Length; i++)
+        {
+            var item = Instantiate(itemdrops[i], transform.position, Quaternion.identity);
+            item.GetComponent<Interactable>().player = player;
+        }
         Destroy(gameObject);  // Default death behavior
     }
 
