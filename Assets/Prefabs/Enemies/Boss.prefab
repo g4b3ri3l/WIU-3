@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2090941191657967534
 Transform:
   m_ObjectHideFlags: 0
@@ -118,3 +118,6 @@ MonoBehaviour:
   endAngle: 360
   boss: {fileID: 0}
   fireDelay: 20
+  audioSource: {fileID: 0}
+  damageClip: {fileID: 8300000, guid: 45bbd8a16a0f3ae45b35ee238e506f65, type: 3}
+  damageSoundCooldown: 1
