@@ -54,7 +54,7 @@ public class NPC : MonoBehaviour
     {
         
 
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if(SceneManager.GetActiveScene().buildIndex == 0)
         {
             if (!hasSpokenBefore)
             {
