@@ -20,31 +20,11 @@ public class SceneLoader : MonoBehaviour
         instance = this;
     }
     #endregion
-    private TMP_Text percentText;
-    [SerializeField] private GameObject loadingPanel;
     // Start is called before the first frame update
 
-    private void Start()
-    {
-        percentText = GetComponent<TMP_Text>();
-    }
     public void LoadScene(string scenename)
     {
-        StartCoroutine(LoadSceneRoutine(scenename));
+        SceneManager.LoadScene(scenename);
     }
-
-    IEnumerator LoadSceneRoutine(string sceneName)
-    {
-        AsyncOperationHandle op =
-        Addressables.LoadSceneAsync(sceneName);
-        while (op.PercentComplete < 1)
-        {
-            percentText.text =
-            string.Format("Loading: {0}%",
-            (int)(op.PercentComplete * 100));
-            yield return null;
-        }
-    }
-
 
 }
