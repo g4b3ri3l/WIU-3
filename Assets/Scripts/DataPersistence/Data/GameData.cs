@@ -1,4 +1,3 @@
-using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +12,9 @@ public class GameData
     public int hp_up;
     public int stam_up;
     public int dmg_up;
+    public float shield;
+    public bool shieldActive;
     public Vector3 playerPos;
-    public List<Item> items;
     public List<Equipment> equipment;
     public GameData()
     {
@@ -25,10 +25,19 @@ public class GameData
             this.hp_up = 0;
         this.stam_up = 0;
         this.dmg_up = 0;
-        this.playerPos = Vector3.zero;
-        
+        this.shield = 0;
+        this.shieldActive = false;
+        //this.playerPos = new Vector3(-106.5f, -60.1f, 0f);
+        if (SceneManager.GetActiveScene().name == "level1 1")
+        {
 
-        this.items = new List<Item>();
+            this.playerPos = new Vector3(28.6f, -8.9f, 0f);
+        }
+        if (SceneManager.GetActiveScene().name == "level2 2")
+        {
+            this.playerPos = new Vector3(-110.4f, -58.2f, 0f);
+
+        }
         this.equipment = new List<Equipment>();
     }
 }

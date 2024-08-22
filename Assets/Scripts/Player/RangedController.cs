@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class RangedController : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
+    [SerializeField] GameObject normalBullet;
+    [SerializeField] GameObject enhancedBullet;
+    private GameObject bullet;
+    private EquipmentManager equipmentManager;
+    [SerializeField] Item enhancedBulletStore;
     [SerializeField] GameObject beam;
     [SerializeField] Transform firePoint;
     [SerializeField] float speed;
@@ -27,10 +32,15 @@ public class RangedController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        equipmentManager = EquipmentManager.instance;
+        bullet = normalBullet;
     }
 
     void Update()
     {
+        if (equipmentManager.enhancedState) bullet = enhancedBullet;
+        else if (bullet != normalBullet)bullet = normalBullet;
+
         if (Input.GetMouseButtonDown(1))
         {
             attacking = true;
@@ -58,6 +68,7 @@ public class RangedController : MonoBehaviour
                 GameObject bulletGO = Instantiate(bullet, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
+                if (bullet == enhancedBullet) { enhancedBulletStore.itemCount--;}
             }
             attacking = false;
         }

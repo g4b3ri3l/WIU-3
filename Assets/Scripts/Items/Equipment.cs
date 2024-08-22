@@ -14,21 +14,21 @@ public class Equipment : Item
     {
         base.Use();
 
-        if (used == false)
+        if (!used && itemCount > 0)
         {
-            RemoveFromInventory();
             EquipmentManager.instance.Add(this);
             used = true;
         }
-        else
+        else if (used)
         {
             RemoveFromEquipment();
-            Inventory.instance.Add(this);
             used = false;
         }
     }
     public void RemoveFromEquipment()
     {
+        used = false;
         EquipmentManager.instance.Remove(this);
     }
+
 }
