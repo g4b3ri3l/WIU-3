@@ -25,6 +25,8 @@ public class GameData
             this.hp_up = 0;
         this.stam_up = 0;
         this.dmg_up = 0;
+        this.shield = 0;
+        this.shieldActive = false;
         //this.playerPos = new Vector3(-106.5f, -60.1f, 0f);
         if (SceneManager.GetActiveScene().name == "level1 1")
         {
