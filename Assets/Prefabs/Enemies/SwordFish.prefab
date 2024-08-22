@@ -111,6 +111,8 @@ MonoBehaviour:
   HealthBar: {fileID: 8657086258110772838}
   player: {fileID: 0}
   swordFishStats: {fileID: 11400000, guid: 8a53a507b02d9e141be096c3575f8a08, type: 2}
+  audioSource: {fileID: 0}
+  StabClip: {fileID: 8300000, guid: f58cc4cc5867cfd49b5280e570fdf34a, type: 3}
 --- !u!114 &226714986655406785
 MonoBehaviour:
   m_ObjectHideFlags: 0

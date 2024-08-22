@@ -12,6 +12,10 @@ public class MeleeController : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] float cooldowntimer = 0;
     PlayerManager playerManager;
+
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip StabClip;
+
     private void Start()
     {
         playerManager = gameObject.GetComponent<PlayerManager>();
@@ -30,6 +34,7 @@ public class MeleeController : MonoBehaviour
                 //animator.SetBool("Melee", true);
                 if (EnemyInSight())
                 {
+                    audioSource.PlayOneShot(StabClip);
                     cooldowntimer = 0;
                     enemy.TakeDamage(playerManager.damage);
                 }

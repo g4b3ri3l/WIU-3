@@ -10,9 +10,17 @@ public class FireBullets : MonoBehaviour
 
     private Vector2 moveDirection;
 
+    [SerializeField] private EnemySpawner boss;
+
     private void Start()
     {
-        InvokeRepeating("Fire", 0f, 2f);
+        
+    }
+
+    private void Update()
+    {
+        if (boss.phase == 2)
+            InvokeRepeating("Fire", 0f, 2f);
     }
 
     private void Fire()

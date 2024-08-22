@@ -13,8 +13,10 @@ public class SawFish : Enemy
 
     private float fixedRotation = 0;
 
-
     [SerializeField] private EnemyHealthBar HealthBar;
+
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip StabClip;
 
     protected override void Awake()
     {
@@ -67,6 +69,7 @@ public class SawFish : Enemy
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(StabClip);
             PlayerManager player = collision.GetComponent<PlayerManager>();
             player.TakeDamage(damage);
         }
