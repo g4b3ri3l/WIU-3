@@ -76,7 +76,7 @@ public class BombManager : MonoBehaviour
                 GameObject bulletGO = Instantiate(purificationBomb, firePoint.position + transform.position, Quaternion.Euler(0, 0, zAngle));
                 Rigidbody2D bulletRigidbody = bulletGO.GetComponent<Rigidbody2D>();
                 bulletRigidbody.AddForce(AimDirection * speed, ForceMode2D.Impulse);
-                bulletGO.GetComponent<bombScript>().audioSource = audioSource;
+                bulletGO.GetComponent<purification>().audioSource = audioSource;
             }
         }
     }
