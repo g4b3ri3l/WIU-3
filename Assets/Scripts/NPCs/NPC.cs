@@ -11,8 +11,14 @@ public class NPC : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private GameObject NPCImage;
+    [SerializeField] private GameObject NPCName;
 
     [SerializeField] private GameObject interaction;
+
+
+
+
 
 
     [Header("Level1 1")]
@@ -90,6 +96,9 @@ public class NPC : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
+            NPCImage.GetComponent<Image>().sprite = this.GetComponent<SpriteRenderer>().sprite;
+            NPCName.GetComponent<TMP_Text>().text = this.name;
+
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();

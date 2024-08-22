@@ -53,7 +53,7 @@ public class DataPersistanceManager : MonoBehaviour
 
         if (sceneName == "level1 1")
         {
-            gameData.playerPos = new Vector3(-103.2f, -56.6f, 0f);
+            gameData.playerPos = new Vector3(-122.66f, -54.59f, 0f);
         }
         else if (sceneName == "level2 2")
         {
