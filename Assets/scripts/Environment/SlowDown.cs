@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlowDownEffector : MonoBehaviour
 {
-    public float slowDownFactor = 0.5f; // Adjust this value to set how much the player should be slowed down
+    public float slowDownFactor = 0.5f; 
     private float originalSpeed;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -12,8 +12,8 @@ public class SlowDownEffector : MonoBehaviour
             MovementController movementController = other.GetComponent<MovementController>();
             if (movementController != null)
             {
-                originalSpeed = movementController.speed; // Store the player's original speed
-                movementController.speed *= slowDownFactor; // Slow down the player
+                originalSpeed = movementController.speed; 
+                movementController.speed *= slowDownFactor;
             }
         }
     }
@@ -25,7 +25,7 @@ public class SlowDownEffector : MonoBehaviour
             MovementController movementController = other.GetComponent<MovementController>();
             if (movementController != null)
             {
-                movementController.speed = originalSpeed; // Restore the player's original speed
+                movementController.speed = originalSpeed; 
             }
         }
     }

@@ -13,7 +13,7 @@ public class MeleeController : MonoBehaviour
     [SerializeField] float cooldowntimer = 0;
     PlayerManager playerManager;
 
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioSource audioSource;  
     [SerializeField] AudioClip StabClip;
 
     private void Start()

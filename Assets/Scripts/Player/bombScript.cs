@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class bombScript : MonoBehaviour
 {
-    [SerializeField] public AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] public AudioSource audioSource;  
     [SerializeField] AudioClip BoomClip;
     [SerializeField] GameObject explosion;
     [SerializeField] float radius = 5;

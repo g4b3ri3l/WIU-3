@@ -77,7 +77,6 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         if (pollutionAmount >0f)
         pollutionAmount -= Time.deltaTime * 2f;
 
-        // Update the cooldown timer
         if (damageSoundCooldownTimer > 0)
         {
             damageSoundCooldownTimer -= Time.deltaTime;
@@ -141,7 +140,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         if (damageSoundCooldownTimer <= 0f)
         {
             audioSource.PlayOneShot(damageClip);
-            damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
+            damageSoundCooldownTimer = damageSoundCooldown; 
         }
     }
 

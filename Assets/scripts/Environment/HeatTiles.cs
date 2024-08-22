@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HeatTiles : MonoBehaviour
 {
-    public float damage = 1f; // Amount of damage to apply
-    public float damageInterval = 1f; // Time in seconds between each damage tick
+    public float damage = 1f; 
+    public float damageInterval = 1f; 
 
     private Coroutine damageCoroutine;
 
@@ -49,7 +49,7 @@ public class HeatTiles : MonoBehaviour
         while (true)
         {
             player.TakeDamage(damage);
-            yield return new WaitForSeconds(damageInterval); // Wait before applying the next damage tick
+            yield return new WaitForSeconds(damageInterval); 
         }
     }
 }
