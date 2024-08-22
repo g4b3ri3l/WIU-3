@@ -44,6 +44,7 @@ public class Boss : Enemy
             if (health <= 0)
             {
                 health = 0;
+                Die();
             }
             HealthBar.UpdateHealthBar(health, Stats.maxHealth);
         }

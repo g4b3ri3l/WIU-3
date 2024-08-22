@@ -33,4 +33,20 @@ public class BossBullet : MonoBehaviour
     {
         CancelInvoke();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                PlayerManager player = collision.gameObject.GetComponent<PlayerManager>();
+                player.TakeDamage(20f);
+                Destroy(this.gameObject);
+            }
+
+            if (collision.CompareTag("Ground")) Destroy(gameObject);
+
+        }
+    }
 }
