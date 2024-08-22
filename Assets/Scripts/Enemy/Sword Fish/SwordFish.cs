@@ -16,6 +16,9 @@ public class SwordFish : Enemy
     [SerializeField] Transform player;
     [SerializeField] private EnemyStats swordFishStats;
 
+    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioClip StabClip;
+
     protected override void Awake()
     {
         HealthBar = GetComponentInChildren<EnemyHealthBar>();
@@ -60,6 +63,7 @@ public class SwordFish : Enemy
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(StabClip);
             PlayerManager player = collision.GetComponent<PlayerManager>();
             player.TakeDamage(damage);
         }

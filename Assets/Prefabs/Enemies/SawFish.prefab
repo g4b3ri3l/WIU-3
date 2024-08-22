@@ -468,15 +468,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 60ede9af6f562354589b3ed6c0293d27, type: 2}
   itemdrops:
-  - {fileID: 4990316752540290209, guid: 304c952137990ab49b050f62aa51b6e7, type: 3}
-  - {fileID: 4990316752540290209, guid: 304c952137990ab49b050f62aa51b6e7, type: 3}
-  - {fileID: 4990316752540290209, guid: 304c952137990ab49b050f62aa51b6e7, type: 3}
+  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
+  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
+  - {fileID: 8368708075493853172, guid: 06f607d6b3fc1dd43a7807f33709c187, type: 3}
   - {fileID: 7640534942428346430, guid: 78e794a1120e58e4b987e26ac09de5ce, type: 3}
   - {fileID: 7640534942428346430, guid: 78e794a1120e58e4b987e26ac09de5ce, type: 3}
   player: {fileID: 0}
   health: 0
   damage: 0
   HealthBar: {fileID: 4747183195291666965}
+  audioSource: {fileID: 0}
+  StabClip: {fileID: 8300000, guid: f58cc4cc5867cfd49b5280e570fdf34a, type: 3}
 --- !u!114 &5188278120093671747
 MonoBehaviour:
   m_ObjectHideFlags: 0
