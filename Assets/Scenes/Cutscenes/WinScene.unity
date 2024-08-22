@@ -428,8 +428,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
+    - {fileID: 0}
     - {fileID: 11400000, guid: b17b7a6a52a86c147b6c2e456f561238, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1142725710}
+          m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Menu
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1142725710}
@@ -975,6 +990,14 @@ PlayableDirector:
     value: {fileID: 1566182386}
   - key: {fileID: -8778984200489822265, guid: d15e9f6d652289a4b8735c2c4f350f5f, type: 2}
     value: {fileID: 1142725711}
+  - key: {fileID: -8778984200489822265, guid: 61d31bb5b3266564d8096b3592ec64c0, type: 2}
+    value: {fileID: 1142725711}
+  - key: {fileID: -7066357431358739625, guid: 61d31bb5b3266564d8096b3592ec64c0, type: 2}
+    value: {fileID: 1029738226}
+  - key: {fileID: 7551377286492434350, guid: 61d31bb5b3266564d8096b3592ec64c0, type: 2}
+    value: {fileID: 1678663650}
+  - key: {fileID: 2463542338004174828, guid: 61d31bb5b3266564d8096b3592ec64c0, type: 2}
+    value: {fileID: 1566182386}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1846386058
