@@ -8,10 +8,14 @@ public class MeleeController : MonoBehaviour
     [SerializeField] float attackCooldown;
     [SerializeField] float range;
     [SerializeField] float colliderDist;
-    [SerializeField] int damage;
     [SerializeField] BoxCollider2D box;
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] float cooldowntimer = 0;
+    PlayerManager playerManager;
+    private void Start()
+    {
+        playerManager = gameObject.GetComponent<PlayerManager>();
+    }
 
     Enemy enemy;
 
@@ -27,7 +31,7 @@ public class MeleeController : MonoBehaviour
                 if (EnemyInSight())
                 {
                     cooldowntimer = 0;
-                    enemy.TakeDamage(damage);
+                    enemy.TakeDamage(playerManager.damage);
                 }
             }
         }

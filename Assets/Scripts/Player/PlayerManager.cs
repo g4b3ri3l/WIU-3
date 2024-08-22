@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
         maxHp = 100f;
         stamina = 100f;
         maxStamina = 100f;
-        damage = 1f;
+        damage = 10f;
 
         shieldActive = false;
         shield = 0;
@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistance
     public void DamageUP()
     {
         dmg_up++;
-        damage = 1f + dmg_up;
+        damage = 10f + dmg_up;
     }
 
     private void Update()
