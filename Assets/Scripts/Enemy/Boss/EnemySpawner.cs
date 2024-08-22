@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -13,12 +14,15 @@ public class EnemySpawner : MonoBehaviour
     private int enemyCount = 0; // Counter to keep track of the number of spawned enemies
 
     public int phase = 1;
+    [SerializeField] private PlayableDirector timeline;
 
-    private void Start()
+    private void OnEnable()
     {
-        if (phase == 1)
-            StartCoroutine(spawnEnemy(interval, SawFish));
-        
+        if (timeline.state != PlayState.Playing)
+        {
+            if (phase == 1)
+                StartCoroutine(spawnEnemy(interval, SawFish));
+        }
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
