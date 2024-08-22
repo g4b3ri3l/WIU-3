@@ -26,7 +26,10 @@ public class FireBullets : MonoBehaviour
     {
         if (boss.phase == 2)
             InvokeRepeating("Fire", 0f, 2f);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         if (damageSoundCooldownTimer > 0)
         {
             damageSoundCooldownTimer -= Time.deltaTime;
@@ -37,11 +40,19 @@ public class FireBullets : MonoBehaviour
     {
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
+<<<<<<< Updated upstream
         if (damageSoundCooldownTimer <= 0f)
         {
             audioSource.PlayOneShot(shootingClip);
             damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
         }
+=======
+/*        if (damageSoundCooldownTimer <= 0f)
+        {
+            audioSource.PlayOneShot(shootingClip);
+            damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
+        }*/
+>>>>>>> Stashed changes
         for (int i = 0; i < bulletsAmount + 1; i++)
         {
             float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
