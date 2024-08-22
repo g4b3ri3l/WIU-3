@@ -60,6 +60,11 @@ public class DataPersistanceManager : MonoBehaviour
             gameData.playerPos = new Vector3(-110.4f, -58.2f, 0f);
         }
 
+        else if (sceneName == "level3 3")
+        {
+            gameData.playerPos = new Vector3(22.32f, -84.33f, 0f);
+        }
+
         foreach (IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
             dataPersistanceObj.LoadData(gameData);
