@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +18,10 @@ public class GameData
     public Vector3 playerPos;
     public List<Equipment> equipment;
     public string levelname;
-    public bool level1, level2, level3; 
+    public bool level1, level2, level3;
+
+    public int plasticBag, plasticStraw, metalScrap, fishScrap, sharkFin, fishSoup, sharkSoup, plasticArmour, enhancedBullets, bucket, oilBucket, bomb, purify;
+
     public GameData()
     {
 
@@ -33,5 +37,7 @@ public class GameData
         this.levelname = null;
         this.playerPos = Vector3.zero;
         this.equipment = new List<Equipment>();
+
+        this.plasticBag = this.plasticStraw = this.metalScrap = this.fishScrap = this.sharkFin = this.fishSoup = this.sharkSoup = this.plasticArmour = this.enhancedBullets = this.bucket = this.oilBucket = this.bomb = this.purify = 0;
     }
 }
