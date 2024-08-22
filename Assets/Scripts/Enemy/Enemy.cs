@@ -1,8 +1,10 @@
+using UnityEditor;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
     private EnemyStats stats;  // Reference to ScriptableObject with common enemy data
+
 
     protected string enemyName;
     protected float currentHealth, attackDamage;
@@ -39,7 +41,6 @@ public abstract class Enemy : MonoBehaviour
         }
 
     }
-
     public virtual void Die()
     {
         Debug.Log($"{stats.enemyName} has died!");

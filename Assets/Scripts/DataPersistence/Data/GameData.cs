@@ -31,7 +31,7 @@ public class GameData
         if (SceneManager.GetActiveScene().name == "level1 1")
         {
 
-            this.playerPos = new Vector3(28.6f, -8.9f, 0f);
+            this.playerPos = new Vector3(-122.66f, -54.59f, 0f);
         }
         if (SceneManager.GetActiveScene().name == "level2 2")
         {

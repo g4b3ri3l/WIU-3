@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b567a53198a25fa4a8532485dbf4f451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1.03
+  radius: 1.39
   circleCollider: {fileID: 4407536066249706161}
   interactionPoint: {fileID: 591624416942480082}
   player: {fileID: 0}
@@ -137,4 +137,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.89
+  m_Radius: 1.37
