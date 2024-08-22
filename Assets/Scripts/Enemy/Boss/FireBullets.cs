@@ -20,7 +20,7 @@ public class FireBullets : MonoBehaviour
     private void Update()
     {
         if (boss.phase == 2)
-            InvokeRepeating("Fire", 0f, 2f);
+            InvokeRepeating("Fire", 0f, 5f);
     }
 
     private void Fire()
