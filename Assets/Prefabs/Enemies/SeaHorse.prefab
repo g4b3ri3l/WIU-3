@@ -288,6 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 9b6bfa0423d5f15478f865feab606e9e, type: 2}
+  audioSource: {fileID: 0}
+  StabClip: {fileID: 8300000, guid: eb8c00c3a6539dc45bbf3aeaba426039, type: 3}
   health: 0
   damage: 0
   HealthBar: {fileID: 7298478070411368976}
