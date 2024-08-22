@@ -111,10 +111,10 @@ public class NPC : MonoBehaviour
             }
         }
 
-        //if (dialogueText.text == dialogue[index])
-        //{
-        //    button.gameObject.SetActive(true);
-        //}
+        if (dialogueText.text == dialogue[index])
+        {
+            button.gameObject.SetActive(true);
+        }
     }
 
     public void zeroText()
