@@ -106,7 +106,7 @@ public class MovementController : MonoBehaviour
         float oggrav = _rigid.gravityScale;
         playerManager.stamina -= 10;
         _rigid.gravityScale = 0.0f;
-        _rigid.velocity = new Vector2(_rigid.velocity.x * dashPower, 0f);
+        _rigid.velocity = new Vector2(_rigid.velocity.x * dashPower, _rigid.velocity.y * dashPower);
         yield return new WaitForSeconds(dashTime);
         _rigid.gravityScale = oggrav;
         isDashing = false;
