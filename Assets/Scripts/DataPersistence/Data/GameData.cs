@@ -27,17 +27,9 @@ public class GameData
         this.dmg_up = 0;
         this.shield = 0;
         this.shieldActive = false;
-        //this.playerPos = new Vector3(-106.5f, -60.1f, 0f);
-        if (SceneManager.GetActiveScene().name == "level1 1")
-        {
 
-            this.playerPos = new Vector3(-122.66f, -54.59f, 0f);
-        }
-        if (SceneManager.GetActiveScene().name == "level2 2")
-        {
-            this.playerPos = new Vector3(-110.4f, -58.2f, 0f);
 
-        }
+        this.playerPos = Vector3.zero;
         this.equipment = new List<Equipment>();
     }
 }
