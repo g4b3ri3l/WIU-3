@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject SawFish;
     [SerializeField] private GameObject SwordFish;
     [SerializeField] private GameObject SeaHorse;
-
     [SerializeField] private float interval = 3.5f;
     [SerializeField] private int maxEnemies = 10; // Maximum number of enemies to spawn
     private int enemyCount = 0; // Counter to keep track of the number of spawned enemies
