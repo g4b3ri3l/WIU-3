@@ -35,7 +35,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] bool hasSpokenBefore;
 
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioSource audioSource;  
     [SerializeField] AudioClip SpeakClip;
 
     private string[] dialogue;

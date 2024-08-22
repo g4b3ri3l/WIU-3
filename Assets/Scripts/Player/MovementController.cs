@@ -25,7 +25,7 @@ public class MovementController : MonoBehaviour
 
     float localScaleX;
 
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioSource audioSource;  
     [SerializeField] AudioClip DashClip;
 
     void Start()

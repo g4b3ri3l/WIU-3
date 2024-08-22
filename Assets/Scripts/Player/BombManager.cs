@@ -15,7 +15,7 @@ public class BombManager : MonoBehaviour
 
     [SerializeField] float offset;
 
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioSource audioSource; 
     [SerializeField] AudioClip shootingClip;
 
     Rigidbody2D rb;

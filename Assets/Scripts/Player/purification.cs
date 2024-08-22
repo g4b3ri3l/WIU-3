@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class purification : MonoBehaviour
 {
-    [SerializeField] public AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] public AudioSource audioSource; 
     [SerializeField] AudioClip BoomClip;
     [SerializeField] GameObject explosion;
     [SerializeField] float radius = 5;

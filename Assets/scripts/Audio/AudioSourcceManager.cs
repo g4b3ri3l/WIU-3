@@ -5,8 +5,8 @@ using UnityEngine.Audio;
 
 public class AudioSourcceManager : MonoBehaviour
 {
-    [SerializeField] AudioMixerGroup audiomix;  // Reference to the AudioSource component
-    [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
+    [SerializeField] AudioMixerGroup audiomix; 
+    [SerializeField] AudioSource audioSource; 
     [SerializeField] AudioClip BGM;
     // Start is called before the first frame update
     void Start()
