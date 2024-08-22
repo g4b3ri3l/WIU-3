@@ -14,6 +14,8 @@ public class FireBullets : MonoBehaviour
 
     [SerializeField] AudioSource audioSource;  // Reference to the AudioSource component
     [SerializeField] AudioClip shootingClip;
+    [SerializeField] private float damageSoundCooldown = 0.5f;
+    private float damageSoundCooldownTimer = 0f;
 
     private void Start()
     {
@@ -24,13 +26,22 @@ public class FireBullets : MonoBehaviour
     {
         if (boss.phase == 2)
             InvokeRepeating("Fire", 0f, 2f);
+
+        if (damageSoundCooldownTimer > 0)
+        {
+            damageSoundCooldownTimer -= Time.deltaTime;
+        }
     }
 
     private void Fire()
     {
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
-        audioSource.PlayOneShot(shootingClip);
+        if (damageSoundCooldownTimer <= 0f)
+        {
+            audioSource.PlayOneShot(shootingClip);
+            damageSoundCooldownTimer = damageSoundCooldown; // Reset the cooldown timer
+        }
         for (int i = 0; i < bulletsAmount + 1; i++)
         {
             float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
